@@ -3,7 +3,9 @@
 
 var numPosts = 0;
 var craigslistItems = new Array();
-var ebayItem = new Array();
+var ebayHighPrice;
+var ebayAvgPrice;
+var ebayLowPrice;
 
 var clComplete = false;
 var ebayComplete = false;
@@ -28,9 +30,11 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p>Ebay average price: $ </p>' + ebayItem['avgPrice'];
+    body += '<p>Ebay high price: $ </p>' + ebayHighPrice;
+    body += '<p>Ebay average price: $ </p>' + ebayAvgPrice;
+    body += '<p>Ebay low price: $ </p>' + ebayLowPrice;
     body += '<p>Gas expenses: $x </p>';
-    body += '<p>Profit: $x </p>';
+    body += '<p>Profit: $ </p>' + (ebayAvgPrice - _price);
 
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
@@ -136,12 +140,10 @@ function findEbayItem(search){
 	});
 	var avgPrice = price / numItems;
 	
-        var item = new Array();
-        item.push(maxPrice);
-        item.push(avgPrice);
-        item.push(minPrice);
+        ebayHighPrice = maxPrice;
+        ebayAvgPrice = avgPrice;
+        ebayLowPrice = minPrice;
         
-        ebayItem = item;
         ebayComplete = true;
 	//console.log('Highest price: ' + maxPrice);
 	//console.log('Average price: ' + avgPrice);
