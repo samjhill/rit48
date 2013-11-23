@@ -16,8 +16,8 @@
     text-decoration: none;
 }
 
-.postLink{
-    color: #333333;
+.postLink:hover{
+    color: #5E5C5C;
     text-decoration: none;
     cursor: pointer;
 }
