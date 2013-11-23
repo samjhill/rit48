@@ -16,12 +16,12 @@ function parseXml(xml) {
         var price = title.substr(title.indexOf("$"), title.indexOf(" "));
         
         
-        //var priceInt = parseInt(price.substr(1));
+        var priceInt = parseInt(price.substr(1));
         
         //this will get rid of TRADE items
-        //if ( priceInt >= 0 ) {
+        if ( priceInt >= 0 ) {
             generatePost(link, price, prettyTitle);
-        //}
+        }
         
     });
 }
