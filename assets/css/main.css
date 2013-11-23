@@ -25,3 +25,8 @@
     font-size: 24pt;
     margin-top: -2.5em;
 }
+element.style {
+padding-right: 15px;
+padding-left: 15px;
+width: 1140px;
+}
