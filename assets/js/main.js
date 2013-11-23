@@ -1,3 +1,9 @@
+//global vars
+//
+
+var numPosts = 0;
+
+
 $.ajax({
     type: "GET",
     url: "assets/php/proxy.php",
@@ -33,5 +39,16 @@ function parseXml(xml) {
 //  _price: the price to purchase the item
 //  _title: title of the post
 function generatePost(_link, _price, _title){
-    $("#list").append('<a class="postLink" href="' + _link +'"><span class="post" style="display:block;"><h3 class="title">' + _title +'</h3><p>Price: $' + _price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
+    
+    //collapse code
+    $("#list").append(' <div class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">');
+    
+    //item title
+    $("#list").append('<a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + _title + '</a></h4></div>');
+    
+    //item body
+    $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse in"><div class="panel-body">This is a test</div></div></div>');
+    
+    numPosts++;
 }
+    
