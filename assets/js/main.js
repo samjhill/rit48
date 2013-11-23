@@ -33,7 +33,7 @@ function search(_query){
 //  _title: title of the post
 function generatePost(_link, _price, _title){
     
-    console.log('generate post called');
+    //console.log('generate post called');
     
     //collapse code
 	$("#list").append('<ul class = "nav nav-pills nav-stacked"><li><div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div></li></ul>');
@@ -69,7 +69,7 @@ function findCraigslistProducts(search){
 }
 
 function parseXml(xml) {
-    console.log(xml);
+    //console.log(xml);
     $(xml).find("item").each(function() {
         var title = $(this).find("title").text();
         var link = $(this).find("link").text();
@@ -88,7 +88,7 @@ function parseXml(xml) {
             items.push( new Object(link, priceInt, prettyTitle));
             
         }
-        //console.log(items);
+        ////console.log(items);
         craigslistItems = items;
         clComplete = true;
         
@@ -123,7 +123,7 @@ function findEbayItem(search){
         }
 	
 	function parseEbayXml(xml) {
-	console.log(xml);
+	//console.log(xml);
 	
 	var items = Array();
 	
@@ -138,7 +138,7 @@ function findEbayItem(search){
 	$(xml).find("item").each(function() {
 	    
 	    var condition =  $(this).find("conditionDisplayName").text();
-	    //console.log(condition);
+	    ////console.log(condition);
 	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
 		
 		var currentPrice = $(this).find("currentPrice").text();
@@ -170,13 +170,13 @@ function findEbayItem(search){
 	}
 	
 	stdev = Math.pow(sum, 1/2);
-	//console.log('test of difference: ' + (priceList[1] - avgPrice));
-	console.log('sum: '+ sum);
-	console.log('avg price: ' + avgPrice);
-	console.log( 'price list before culling: ' + priceList.length );
-	console.log('stdev: ' + stdev);
-	console.log('price: ' + price);
-	console.log('num: ' + numItems);
+	////console.log('test of difference: ' + (priceList[1] - avgPrice));
+	//console.log('sum: '+ sum);
+	//console.log('avg price: ' + avgPrice);
+	//console.log( 'price list before culling: ' + priceList.length );
+	//console.log('stdev: ' + stdev);
+	//console.log('price: ' + price);
+	//console.log('num: ' + numItems);
 	
 	var higherThanAvg = 0;
 	var lowerThanAvg = 0;
@@ -194,7 +194,7 @@ function findEbayItem(search){
 	var standardizedSum = 0;
 	
 	var lowerTail = avgPrice - (lowerThanAvg/(lowerThanAvg + higherThanAvg) * stdev);
-	console.log('lower tail: ' + lowerTail);
+	//console.log('lower tail: ' + lowerTail);
 	
 	for( var i = 0; i < priceList.length; i++){
 	    if (priceList[i] < lowerTail) {
@@ -208,16 +208,16 @@ function findEbayItem(search){
 		standardizedSum += priceList[i];
 	    }
 	}
-	console.log( 'price list after culling: ' + priceList.length );
-	//console.log( 'higher than average: ' + higherThanAvg);
-	//console.log( 'lower than average: ' + lowerThanAvg);
+	//console.log( 'price list after culling: ' + priceList.length );
+	////console.log( 'higher than average: ' + higherThanAvg);
+	////console.log( 'lower than average: ' + lowerThanAvg);
 	
         ebayHighPrice = Math.max.apply(Math, priceList);
         ebayAvgPrice = standardizedSum / priceList.length;
         ebayLowPrice = Math.min.apply(Math, priceList);
         
-	console.log( ebayHighPrice );
-	console.log( ebayLowPrice );
+	//console.log( ebayHighPrice );
+	//console.log( ebayLowPrice );
 	
         $('.highPrice').each(function(){
             $(this).empty();
@@ -241,11 +241,11 @@ function findEbayItem(search){
         });
         
         ebayComplete = true;
-	//console.log('Highest price: ' + maxPrice);
-	//console.log('Average price: ' + avgPrice);
-	//console.log('Lowest price: ' + minPrice);
+	////console.log('Highest price: ' + maxPrice);
+	////console.log('Average price: ' + avgPrice);
+	////console.log('Lowest price: ' + minPrice);
 	
-	//console.log(numItems);
+	////console.log(numItems);
 	
 	//$('#content').append('<p>Highest price: '+ maxPrice + '</p>');
 	//$('#content').append('<p>Average price: '+ avgPrice + '</p>');
