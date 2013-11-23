@@ -1,6 +1,8 @@
 <?php
-    echo '<h1>Welcome to MiddleMan.</h1>
-    <h2>Please input your data so that we can begin finding you money making opportunities!</h2>
+    echo '
+    
+    <img src="assets/img/logo.png" alt="logo" />
+    <h2>MiddleMan helps you find and flip items from Craigslist to Ebay for profit.</h2>
     
     <form class="well span8">
     <div class="row">
