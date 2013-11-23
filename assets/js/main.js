@@ -178,9 +178,20 @@ function findEbayItem(search){
 	console.log('price: ' + price);
 	console.log('num: ' + numItems);
 	
-        ebayHighPrice = parseInt(maxPrice);
-        ebayAvgPrice = parseInt(avgPrice);
-        ebayLowPrice = parseInt(minPrice);
+	//go through price list, drop lower tail of stdev
+	//anything that's less than the avg-(stdev*2)
+	standardizedSum = 0;
+	for( var i = 0; i < priceList.length; i++){
+	    if (priceList[i] < (avgPrice - (stdev*2))) {
+		//remove the item
+		priceList[i].pop0();
+	    }
+	    standardizedSum += priceList[i];
+	}
+	
+        ebayHighPrice = Math.max(priceList);
+        ebayAvgPrice = standardizedSum / priceList.length;
+        ebayLowPrice = Math.min(priceList);
         
         $('.highPrice').each(function(){
             $(this).empty();
