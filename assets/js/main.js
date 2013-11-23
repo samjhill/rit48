@@ -169,8 +169,8 @@ function findEbayItem(search){
 	console.log('stdev: ' + stdev);
 	
 	
-	console.log('price' + price);
-	console.log('num' + numItems);
+	console.log('price: ' + price);
+	console.log('num: ' + numItems);
         ebayHighPrice = parseInt(maxPrice);
         ebayAvgPrice = parseInt(avgPrice);
         ebayLowPrice = parseInt(minPrice);
