@@ -18,7 +18,7 @@
         <?php include ('assets/php/welcome.php'); ?>
     </div>
     
-    <div id="main" style="visibility: hidden;">
+    <div id="main">
         <input class="input" id="searchBox"></input>
         <button class="btn btn-primary" type="button" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);">Get info</button>
         
