@@ -14,15 +14,15 @@
 <body>
     
     <?php include ('assets/php/header.php'); ?>
+    <div id="welcome">
+        <?php include ('assets/php/welcome.php'); ?>
+    </div>
     
-    <?php include ('assets/php/welcome.php'); ?>
-    
-    
-    <div id="main">
+    <div id="main" style="visibility: hidden;">
         <input class="input" id="searchBox"></input>
         <button class="btn btn-primary" type="button" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);">Get info</button>
         
-        <div class="panel-group" id="accordion">
+        <div class="panel-group" id="accordion" >
             <div id="list"></div>
         </div>
     </div>
