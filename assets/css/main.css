@@ -3,6 +3,10 @@
     padding: 1em;
 }
 
+#main .title{
+    margin-right: 2em;
+}
+
 .post{
     padding: 1em;
 }
