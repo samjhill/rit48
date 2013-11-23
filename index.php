@@ -14,9 +14,9 @@
 <body>
     
     <?php include ('assets/php/header.php'); ?>
-    
-    <?php include ('assets/php/welcome.php'); ?>
-    
+    <div id="welcome">
+        <?php include ('assets/php/welcome.php'); ?>
+    </div>
     
     <div id="main">
         <input class="input" id="searchBox"></input>
