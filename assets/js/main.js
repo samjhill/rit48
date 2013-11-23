@@ -191,7 +191,7 @@ function findEbayItem(search){
 	}
 	//go through price list, drop lower tail of stdev
 	//anything that's less than the avg-(stdev*2)
-	standardizedSum = 0;
+	var standardizedSum = 0;
 	
 	var lowerTail = avgPrice - (lowerThanAvg/(lowerThanAvg + higherThanAvg) * stdev);
 	console.log('lower tail: ' + lowerTail);
@@ -209,13 +209,16 @@ function findEbayItem(search){
 	    }
 	}
 	console.log( 'price list after culling: ' + priceList.length );
-	console.log( 'higher than average: ' + higherThanAvg);
-	console.log( 'lower than average: ' + lowerThanAvg);
+	//console.log( 'higher than average: ' + higherThanAvg);
+	//console.log( 'lower than average: ' + lowerThanAvg);
 	
         ebayHighPrice = Math.max(priceList);
         ebayAvgPrice = standardizedSum / priceList.length;
         ebayLowPrice = Math.min(priceList);
         
+	console.log( ebayHighPrice );
+	console.log( ebayLowPrice );
+	
         $('.highPrice').each(function(){
             $(this).empty();
             $(this).append(ebayHighPrice);
