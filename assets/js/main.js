@@ -30,9 +30,9 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p id="highPrice">High: $' + ebayHighPrice + '</p>';
-    body += '<p id="medPrice">Average: $' + ebayAvgPrice + '</p>';
-    body += '<p id="lowPrice">Low: $' + ebayLowPrice + '</p>';
+    body += '<p class="highPrice">High: $' + ebayHighPrice + '</p>';
+    body += '<p class="medPrice">Average: $' + ebayAvgPrice + '</p>';
+    body += '<p class="lowPrice">Low: $' + ebayLowPrice + '</p>';
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $' + (ebayAvgPrice - _price) + '</p>';
 
@@ -118,7 +118,7 @@ function findEbayItem(search){
 	
 	var numItems = 0;
 	var price = 0;
-	var maxPrice = 0;
+	var maxPrice = -1;
 	var minPrice = 99999999;
 	
 	$(xml).find("item").each(function() {
@@ -144,7 +144,7 @@ function findEbayItem(search){
         ebayAvgPrice = avgPrice;
         ebayLowPrice = minPrice;
         
-        $('#highPrice').each(function(){
+        $('.highPrice').each(function(){
             $(this).append(ebayHighPrice);
             console.log('wrote high price: ' + ebayHighPrice);
         });
