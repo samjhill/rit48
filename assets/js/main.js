@@ -46,12 +46,12 @@ function generatePost(_link, _price, _title){
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $<span class="profit">' + _price + '</span></p>';
     
-	$("#sparkline").sparkline( ['$<span class="lowPrice">',(('<span class="avgPrice">'-'$<span class="lowPrice">')/2),'<span class="avgPrice">',(('$<span class="highPrice">'-'<span class="avgPrice">')/2),'$<span class="highPrice">'], {
+	$("#sparkline").sparkline( [ebayLowPrice,((ebayAvgPrice-ebayLowPrice)/2),ebayAvgPrice,((ebayHighPrice-ebayAvgPrice)/2),ebayHighPrice], {
     type: 'box',
     raw: false,
-    target: '<span class="avgPrice">',
-    minValue: '$<span class="lowPrice">',
-    maxValue: '$<span class="highPrice">'});
+    target: ebayAvgPrice,
+    minValue: ebayLowPrice,
+    maxValue: ebayHighPrice});
 
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
