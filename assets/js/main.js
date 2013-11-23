@@ -145,8 +145,18 @@ function findEbayItem(search){
         ebayLowPrice = minPrice;
         
         $('.highPrice').each(function(){
+            $(this).empty();
             $(this).append(ebayHighPrice);
-            console.log('wrote high price: ' + ebayHighPrice);
+        });
+        
+        $('.avgPrice').each(function(){
+            $(this).empty();
+            $(this).append(ebayAvgPrice);
+        });
+        
+        $('.lowPrice').each(function(){
+            $(this).empty();
+            $(this).append(ebayLowPrice);
         });
         
         ebayComplete = true;
