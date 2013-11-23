@@ -34,17 +34,20 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	var minPrice = 99999999;
 	
 	$(xml).find("item").each(function() {
-	    var currentPrice = $(this).find("currentPrice").text();
-	    currentPrice = parseInt(currentPrice);
-	    
-	    if(currentPrice > maxPrice){
-		maxPrice = currentPrice;
+	    var condition =  $(this.find("condition").text());
+	    if((condition == 'New') || (condition == 'New other (see details)')){
+		var currentPrice = $(this).find("currentPrice").text();
+		currentPrice = parseInt(currentPrice);
+		
+		if(currentPrice > maxPrice){
+		    maxPrice = currentPrice;
+		}
+		if(currentPrice < minPrice){
+		    minPrice = currentPrice;
+		}
+		price += currentPrice;
+		numItems++;
 	    }
-	    if(currentPrice < minPrice){
-		minPrice = currentPrice;
-	    }
-	    price += currentPrice;
-	    numItems++;
 	});
 	var avgPrice = price / numItems;
 	
