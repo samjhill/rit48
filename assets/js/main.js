@@ -216,6 +216,9 @@ function findEbayItem(search){
         ebayAvgPrice = standardizedSum / priceList.length;
         ebayLowPrice = Math.min.apply(Math, priceList);
         
+	ebayHighPrice = Math.round(ebayHighPrice * 100) / 100;
+	ebayAvgPrice = Math.round(ebayAvgPrice * 100) / 100;
+	ebayLowPrice = Math.round(ebayLowPrice * 100) / 100;
 	//console.log( ebayHighPrice );
 	//console.log( ebayLowPrice );
 	
