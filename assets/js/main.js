@@ -10,7 +10,7 @@ function search(_query){
     console.log(ebayItem);
     
     for(var i = 0; i < craigslistItems.length; i++){
-        generatePost(craigslistItems[i].);
+        //generatePost(craigslistItems[i].);
     }
     
 }
