@@ -35,7 +35,7 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	
 	$(xml).find("item").each(function() {
 	    var condition =  $(this).find("conditionDisplayName").text();
-	    console.log(condition);
+	    //console.log(condition);
 	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
 		var currentPrice = $(this).find("currentPrice").text();
 		currentPrice = parseInt(currentPrice);
@@ -52,11 +52,13 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	});
 	var avgPrice = price / numItems;
 	
-	console.log('Highest price: ' + maxPrice);
-	console.log('Average price: ' + avgPrice);
-	console.log('Lowest price: ' + minPrice);
+	//console.log('Highest price: ' + maxPrice);
+	//console.log('Average price: ' + avgPrice);
+	//console.log('Lowest price: ' + minPrice);
 	
-	console.log(numItems);
+	//console.log(numItems);
 	
-	$('#content').append('Average price: '+ avgPrice);
+	$('#content').append('<p>Highest price: '+ maxPrice + '</p>');
+	$('#content').append('<p>Average price: '+ avgPrice + '</p>');
+	$('#content').append('<p>Lowest price: '+ minPrice + '</p>');
     }
