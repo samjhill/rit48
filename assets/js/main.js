@@ -156,25 +156,26 @@ function findEbayItem(search){
 	    }
 	});
 	var avgPrice = price / numItems;
-	console.log('avg price: ' + avgPrice);
-	console.log( priceList );
+	
 	
 	//calculate stDev
 	var stddev = 0;
 	var sum = 0;
 	for( var i = 0; i < priceList.length; i++){
-	    var difference = priceList[i] - avgPrice;
-	    sum = sum + Math.pow((difference) , 2);
+	    var difference = parseFloat(priceList[i]) - avgPrice;
+	    sum = sum + Math.pow(difference , 2);
 	    //sum = sum + (priceList[i] - avgPrice);
 	}
-	console.log('sum: '+ sum);
+	
 	stdev = Math.pow(sum, 1/2);
 	
+	console.log('sum: '+ sum);
+	console.log('avg price: ' + avgPrice);
+	console.log( 'price list: ' + priceList );
 	console.log('stdev: ' + stdev);
-	
-	
 	console.log('price: ' + price);
 	console.log('num: ' + numItems);
+	
         ebayHighPrice = parseInt(maxPrice);
         ebayAvgPrice = parseInt(avgPrice);
         ebayLowPrice = parseInt(minPrice);
