@@ -142,7 +142,7 @@ function findEbayItem(search){
 	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
 		
 		var currentPrice = $(this).find("currentPrice").text();
-		currentPrice = parseInt(currentPrice);
+		currentPrice = parseFloat(currentPrice);
 		priceList.push(currentPrice);
 		
 		if(currentPrice > maxPrice){
@@ -155,25 +155,51 @@ function findEbayItem(search){
 		numItems++;
 	    }
 	});
-	var avgPrice = price / numItems;
-	console.log( priceList );
+	var avgPrice = parseFloat(price / numItems);
+	var sAvgPrice = 0;
+	for( var i = 0; i < 30; i++){
+	    sAvgPrice += priceList[i] / 30;
+	}
 	
 	//calculate stDev
 	var stddev = 0;
 	var sum = 0;
-	for( var i = 0; i < priceList.length; i++){
-	    sum = sum + Math.pow((priceList[i] - avgPrice) , 2);
+	for( var i = 0; i < 30; i++){
+	    var difference = priceList[i] - sAvgPrice;
+	    sum += difference * difference/30;
 	}
-	stdev = Math.sqrt(sum);
 	
+	stdev = Math.pow(sum, 1/2);
+	//console.log('test of difference: ' + (priceList[1] - avgPrice));
+	console.log('sum: '+ sum);
+	console.log('avg price: ' + avgPrice);
+	console.log( 'price list before culling: ' + priceList.length );
 	console.log('stdev: ' + stdev);
+	console.log('price: ' + price);
+	console.log('num: ' + numItems);
 	
+	//go through price list, drop lower tail of stdev
+	//anything that's less than the avg-(stdev*2)
+	standardizedSum = 0;
+	var lowerTail = avgPrice - stdev;
+	console.log('lower tail: ' + lowerTail);
+	for( var i = 0; i < priceList.length; i++){
+	    if (priceList[i] < lowerTail) {
+		//find index of item
+		var index = priceList.indexOf(priceList[i]);
+		//remove the item
+		priceList.splice(index, 1);
+	    }
+	    else{
+		//the number is within boundaries, keep it
+		standardizedSum += priceList[i];
+	    }
+	}
+	console.log( 'price list after culling: ' + priceList.length );
 	
-	console.log('price' + price);
-	console.log('num' + numItems);
-        ebayHighPrice = parseInt(maxPrice);
-        ebayAvgPrice = parseInt(avgPrice);
-        ebayLowPrice = parseInt(minPrice);
+        ebayHighPrice = Math.max(priceList);
+        ebayAvgPrice = standardizedSum / priceList.length;
+        ebayLowPrice = Math.min(priceList);
         
         $('.highPrice').each(function(){
             $(this).empty();
