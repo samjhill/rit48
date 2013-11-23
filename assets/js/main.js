@@ -12,6 +12,6 @@ function parseXml(xml) {
         var link = $(this).find("link").text();
         //parse cost out of title, need to update it out of +4 to something dynamic
         var price = title.substr(title.indexOf("$") + 4);
-        $("#list").append('<a href="' + link +'"><span style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
+        $("#list").append('<a href="' + link +'"><span style="display:block;"><h2>' + title.substr(0,25) +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
     });
 }
