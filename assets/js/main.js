@@ -53,6 +53,8 @@ function generatePost(_link, _price, _title){
 	    minValue: ebayLowPrice,
 	    maxValue: ebayHighPrice});
     
+    body += '<p id="customresult"><span id="trychart"><canvas width="62" height="18" style="display: inline-block; width: 62px; height: 18px; vertical-align: top;"></canvas></span></p>';
+    
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
     
