@@ -11,22 +11,7 @@ var ebayComplete = false;
 function search(_query){
     findCraigslistProducts(_query);
     findEbayItem(_query);
-    
-    if (!clComplete) {
-        setTimeout(search, 200);
-    }
-    else{
-        console.log(craigslistItems);
-    }
-    
-    if (!ebayComplete) {
-        setTimeout(search, 200);
-    }
-    else{
-        console.log(ebayItem);
-    }
-    
-    
+
 }
 
 
@@ -45,7 +30,7 @@ function findCraigslistProducts(search){
 }
 
 function parseXml(xml) {
-    console.log(xml);
+    //console.log(xml);
     $(xml).find("item").each(function() {
         var title = $(this).find("title").text();
         var link = $(this).find("link").text();
@@ -61,10 +46,12 @@ function parseXml(xml) {
         //this will get rid of TRADE items
         if ( priceInt >= 0 ) {
             items.push( new Object(link, priceInt, prettyTitle));
+            generatePost(link, priceInt, prettyTitle);
         }
         //console.log(items);
         craigslistItems = items;
         clComplete = true;
+        
     });
 }
 
@@ -96,7 +83,7 @@ function findEbayItem(search){
         }
 	
 	function parseEbayXml(xml) {
-	console.log(xml);
+	//console.log(xml);
 	
 	var numItems = 0;
 	var price = 0;
@@ -157,7 +144,7 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p>Ebay average price: $x </p>';
+    body += '<p>Ebay average price: $ </p>' + ebayItem['avgPrice'];
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $x </p>';
 
