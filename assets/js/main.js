@@ -13,14 +13,15 @@ function parseXml(xml) {
         //parse title down so it's not super long
         title = title.substr(0, title.indexOf("$"));
         //parse price out of title
-        var price = title.substr(title.indexOf("$"), title.indexOf(" "));
+        //var price = title.substr(title.indexOf("$"), title.indexOf(" "));
+        var price = '100';
         
-        var priceInt = parseInt(price.substr(1));
+        //var priceInt = parseInt(price.substr(1));
         
         //this will get rid of TRADE items
-        if ( priceInt >= 0 ) {
+        //if ( priceInt >= 0 ) {
             generatePost(link, price, title);
-        }
+        //}
         
     });
 }
