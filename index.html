@@ -53,8 +53,8 @@ header('X-Frame-Options: GOFORIT');
   </header>
     
     <div id="main">
-        <input id="searchBox"></input>
-        <button type="button" onclick="search(document.getElementById('searchBox').value);">Get info</button>
+        <input class="input" id="searchBox"></input>
+        <button class="btn btn-primary" type="button" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);">Get info</button>
         
         <div class="panel-group" id="accordion">
             <div id="list"></div>

@@ -34,7 +34,7 @@ function generatePost(_link, _price, _title){
     body += '<p>Average price: $' + ebayAvgPrice + '</p>';
     body += '<p>Low price: $' + ebayLowPrice + '</p>';
     body += '<p>Gas expenses: $x </p>';
-    body += '<p>Profit: $ </p>' + (ebayAvgPrice - _price);
+    body += '<p>Profit: $' + (ebayAvgPrice - _price) + '</p>';
 
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
