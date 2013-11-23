@@ -34,7 +34,7 @@ function generatePost(_link, _price, _title){
     body += '<p>Average: $<span class="avgPrice">' + ebayAvgPrice + '</span></p>';
     body += '<p>Low: $<span class="lowPrice">' + ebayLowPrice + '</span></p>';
     body += '<p>Gas expenses: $x </p>';
-    body += '<p>Profit: $' + (ebayAvgPrice - parseInt(_price)) + '</p>';
+    body += '<p>Profit: $<span class="profit">' + _price + '</span></p>';
 
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
@@ -157,6 +157,11 @@ function findEbayItem(search){
         $('.lowPrice').each(function(){
             $(this).empty();
             $(this).append(ebayLowPrice);
+        });
+        
+        $('.profit').each(function(){
+            var cost = $(this).text();
+            $(this).append(ebayAvgPrice - cost);
         });
         
         ebayComplete = true;
