@@ -142,7 +142,7 @@ function findEbayItem(search){
 	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
 		
 		var currentPrice = $(this).find("currentPrice").text();
-		currentPrice = parseInt(currentPrice);
+		currentPrice = parseFloat(currentPrice);
 		priceList.push(currentPrice);
 		
 		if(currentPrice > maxPrice){
@@ -155,16 +155,15 @@ function findEbayItem(search){
 		numItems++;
 	    }
 	});
-	var avgPrice = price / numItems;
+	var avgPrice = parseFloat(price / numItems);
 	
 	
 	//calculate stDev
 	var stddev = 0;
 	var sum = 0;
 	for( var i = 0; i < priceList.length; i++){
-	    var difference = parseFloat(priceList[i]) - avgPrice;
-	    sum = sum + Math.pow(difference , 2);
-	    //sum = sum + (priceList[i] - avgPrice);
+	    var difference = priceList[i] - avgPrice;
+	    sum += Math.pow(difference , 2);
 	}
 	
 	stdev = Math.pow(sum, 1/2);
