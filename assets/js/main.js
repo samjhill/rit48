@@ -19,8 +19,12 @@ function parseXml(xml) {
         
         //this will get rid of TRADE items
         if ( priceInt >= 0 ) {
-            $("#list").append('<a href="' + link +'"><span class="post" style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
+            generatePost(link, price, title);
         }
         
     });
+}
+
+function generatePost(_link, _price, _title){
+    $("#list").append('<a href="' + _link +'"><span class="post" style="display:block;"><h2>' + _title +'</h2><p>Price: ' + _price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
 }
