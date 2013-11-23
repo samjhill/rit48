@@ -161,7 +161,7 @@ function findEbayItem(search){
         
         $('.profit').each(function(){
             var cost = $(this).text();
-            $(this).append(ebayAvgPrice - cost);
+            $(this).append(parseInt(ebayAvgPrice - cost));
         });
         
         ebayComplete = true;
