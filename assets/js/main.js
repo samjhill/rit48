@@ -187,6 +187,8 @@ function findEbayItem(search){
 
 
 //initialize keydown search
-$("#searchBox").keydown(console.log('key pressed'));
+$("#searchBox").keyup(function(e){
+    console.log('key pressed' + e)
+    });
 
     
