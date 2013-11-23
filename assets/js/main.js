@@ -126,15 +126,26 @@ function findEbayItem(search){
 	function parseEbayXml(xml) {
 	console.log(xml);
 	
+	var items = Array();
+	
 	var numItems = 0;
 	var price = 0;
 	var maxPrice = -1;
 	var minPrice = 99999999;
 	
-	$(xml).find("item").each(function() {
+	items = $(xml).find("item");
+	
+	//find average price of first 30 items
+	for(var i = 0; i < 30; i++){
+	    console.log(items[i]);
+	}
+	
+	items.each(function() {
+	    
 	    var condition =  $(this).find("conditionDisplayName").text();
 	    //console.log(condition);
 	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
+		
 		var currentPrice = $(this).find("currentPrice").text();
 		currentPrice = parseInt(currentPrice);
 		
