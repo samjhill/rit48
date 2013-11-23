@@ -19,7 +19,7 @@ function parseXml(xml) {
         
         //this will get rid of TRADE items
         if ( priceInt >= 0 ) {
-            $("#list").append('<a href="' + link +'"><span style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
+            $("#list").append('<a href="' + link +'"><span class="post" style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
         }
         
     });

@@ -1,4 +1,22 @@
 #main{
-    padding-top: 2.5em;
+    margin-top: 2.5em;
     padding: 1em;
+}
+
+.post{
+    padding: 1em;
+}
+
+.post a{
+    color: #333333;
+    text-decoration: none;
+}
+
+.post a:hover{
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+.post > .fa-caret-square-o-right{
+    font-size: 24pt;
 }
