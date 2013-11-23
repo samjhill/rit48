@@ -163,7 +163,8 @@ function findEbayItem(search){
 	var stddev = 0;
 	var sum = 0;
 	for( var i = 0; i < priceList.length; i++){
-	    sum = sum + Math.pow((priceList[i] - avgPrice) , 2);
+	    //sum = sum + Math.pow((priceList[i] - avgPrice) , 2);
+	    sum = sum + (priceList[i] - avgPrice);
 	}
 	stdev = Math.sqrt(sum);
 	
