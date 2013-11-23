@@ -11,7 +11,7 @@ function parseXml(xml) {
         var title = $(this).find("title").text();
         var link = $(this).find("link").text();
         //parse title down so it's not super long
-        title = title.substr(title.indexOf("$") + 4);
+        title = title.substr(title.indexOf("$") + title.indexOf(" "));
         //parse price out of title
         var price = title.substr(title.indexOf("$"), title.indexOf(" "));
         
