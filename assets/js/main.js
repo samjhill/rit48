@@ -248,9 +248,9 @@ function findEbayItem(search){
 	$("#sparkline").sparkline( [ebayLowPrice,((ebayAvgPrice-ebayLowPrice)/2),ebayAvgPrice,((ebayHighPrice-ebayAvgPrice)/2),ebayHighPrice], {
 	    type: 'box',
 	    raw: false,
-	     target: ebayAvgPrice,
-	     minValue: ebayLowPrice,
-	     maxValue: ebayHighPrice});
+	    target: ebayAvgPrice,
+	    minValue: ebayLowPrice,
+	    maxValue: ebayHighPrice});
 		
 	////console.log('Highest price: ' + maxPrice);
 	////console.log('Average price: ' + avgPrice);
