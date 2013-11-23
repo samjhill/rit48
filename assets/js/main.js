@@ -133,10 +133,9 @@ function findEbayItem(search){
 	var minPrice = 99999999;
 	var priceList = new Array();
 	
-	items = $(xml).find("item");
 	
 	
-	items.each(function() {
+	$(xml).find("item").each(function() {
 	    
 	    var condition =  $(this).find("conditionDisplayName").text();
 	    //console.log(condition);
