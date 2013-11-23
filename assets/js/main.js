@@ -14,6 +14,30 @@ function search(_query){
 
 }
 
+//generates a post to append to the list
+//then appends it to the list
+// variables:
+//  _link: standard href stuff, the entire post will link here so choose carefully
+//  _price: the price to purchase the item
+//  _title: title of the post
+function generatePost(_link, _price, _title){
+    
+    //collapse code
+    $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
+    
+    var body = '<a href="' + _link +'">Link to Craigslist post</a>';
+    body += '<p>Ebay average price: $ </p>' + ebayItem['avgPrice'];
+    body += '<p>Gas expenses: $x </p>';
+    body += '<p>Profit: $x </p>';
+
+    //item body
+    $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
+    
+    $("#list").append('');
+                      
+    numPosts++;
+}
+
 
 //////
 //
@@ -133,28 +157,6 @@ function findEbayItem(search){
 //////
 
 
-//generates a post to append to the list
-//then appends it to the list
-// variables:
-//  _link: standard href stuff, the entire post will link here so choose carefully
-//  _price: the price to purchase the item
-//  _title: title of the post
-function generatePost(_link, _price, _title){
-    
-    //collapse code
-    $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
-    
-    var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p>Ebay average price: $ </p>' + ebayItem['avgPrice'];
-    body += '<p>Gas expenses: $x </p>';
-    body += '<p>Profit: $x </p>';
 
-    //item body
-    $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
-    
-    $("#list").append('');
-                      
-    numPosts++;
-}
     
 }
