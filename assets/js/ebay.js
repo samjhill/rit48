@@ -35,6 +35,8 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	
 	$(xml).find("item").each(function() {
 	    var currentPrice = $(this).find("currentPrice").text();
+	    currentPrice = parseInt(currentPrice);
+	    
 	    if(currentPrice > maxPrice){
 		maxPrice = currentPrice;
 	    }
