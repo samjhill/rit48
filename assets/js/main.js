@@ -30,9 +30,9 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p>High: $' + ebayHighPrice + '</p>';
-    body += '<p>Average: $' + ebayAvgPrice + '</p>';
-    body += '<p>Low: $' + ebayLowPrice + '</p>';
+    body += '<p id="highPrice">High: $' + ebayHighPrice + '</p>';
+    body += '<p id="medPrice">Average: $' + ebayAvgPrice + '</p>';
+    body += '<p id="lowPrice">Low: $' + ebayLowPrice + '</p>';
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $' + (ebayAvgPrice - _price) + '</p>';
 
@@ -144,6 +144,7 @@ function findEbayItem(search){
         ebayAvgPrice = avgPrice;
         ebayLowPrice = minPrice;
         
+        $('#list').find("highPrice").append(ebayHighPrice);
         ebayComplete = true;
 	//console.log('Highest price: ' + maxPrice);
 	//console.log('Average price: ' + avgPrice);
