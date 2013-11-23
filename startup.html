@@ -7,7 +7,7 @@
     <link type="text/css" rel="stylesheet" href="assets/libraries/font-awesome/css/font-awesome.css" />
     <link type="text/css" rel="stylesheet" href="assets/libraries/bootstrap/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/main.css"/>
-		
+	<link type="text/css" rel="stylesheet" href="assets/libraries/slider/css/slider.css" />
 </head>
 
 <body>
@@ -72,30 +72,8 @@
 	</div>
 	<div class="span3">
             <label>Distance willing to travel:</label>
-	    <div class="radio">
-		<label>
-		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-		5 miles
-		</label>
-	    </div>
-	    <div class="radio">
-		<label>
-		<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-		10 miles
-		</label>
-	    </div>
-	    <div class="radio">
-		<label>
-		<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-		25 miles
-		</label>
-	    </div>
-	    <div class="radio">
-	        <label>
-	        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
-		50 miles
-		</label>
-	    </div>
+	    <ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="300" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
+		</ul>
 	</div>
 	<div class="span3">
 	    <label>Car MPG:</label>
@@ -133,5 +111,9 @@
     </div>    
     <button type="button" class="btn btn-default">Submit</button>    
 </form>
+<script src="assets/libraries/jquery/jquery-2.0.3.min.js"></script>
+    <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="assets/libraries/slider/js/bootstrap-slider.js"></script>
+    <script src="assets/js/sliderFile.js"></script>
 </body>
 </html>
