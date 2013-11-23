@@ -5,10 +5,13 @@ var numPosts = 0;
 
 function search(_query){
     var craigslistItems = findCraigslistProducts(_query);
-    var ebayItems = findEbayProducts(_query);
+    var ebayItem = findEbayProducts(_query);
     console.log(craigslistItems);
-    console.log(ebayItems);
+    console.log(ebayItem);
     
+    for(var i = 0; i < craigslistItems.length; i++){
+        generatePost(craigslistItems[i].);
+    }
     
 }
 
@@ -45,7 +48,7 @@ function parseXml(xml) {
         if ( priceInt >= 0 ) {
             items.push( new Object(link, priceInt, prettyTitle));
         }
-        
+        console.log(items);
         return items;
     });
 }
@@ -108,6 +111,7 @@ function findEbayProducts(search){
         item.push(maxPrice);
         item.push(avgPrice);
         item.push(minPrice);
+        console.log(item);
 	//console.log('Highest price: ' + maxPrice);
 	//console.log('Average price: ' + avgPrice);
 	//console.log('Lowest price: ' + minPrice);
