@@ -46,7 +46,7 @@ function generatePost(_link, _price, _title){
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $<span class="profit">' + _price + '</span></p>';
     
-	$("#sparkline").sparkline( priceList, {
+	$("#sparkline").sparkline( ['$<span class="lowPrice">',(('<span class="avgPrice">'-'$<span class="lowPrice">')/2),'<span class="avgPrice">',(('$<span class="highPrice">'-'<span class="avgPrice">')/2),'$<span class="highPrice">'], {
     type: 'box',
     raw: false,
     target: '<span class="avgPrice">',
