@@ -156,6 +156,7 @@ function findEbayItem(search){
 	    }
 	});
 	var avgPrice = price / numItems;
+	console.log('avg price: ' + avgPrice);
 	console.log( priceList );
 	
 	//calculate stDev
