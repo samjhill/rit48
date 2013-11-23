@@ -45,8 +45,9 @@ function parseXml(xml) {
         var items = new Array();
         //this will get rid of TRADE items
         if ( priceInt >= 0 ) {
+            generatePost(link, priceInt, prettyTitle);
             items.push( new Object(link, priceInt, prettyTitle));
-            this.generatePost(link, priceInt, prettyTitle);
+            
         }
         //console.log(items);
         craigslistItems = items;
