@@ -8,8 +8,8 @@ $.ajax({
 function parseXml(xml) {
     console.log(xml);
     $(xml).find("item").each(function() {
-        var title = $(this).find("title").text();
+        var title = $(this).find("dc:title").text();
         var link = $(this).find("link").text();
-        $("#list").append('<div><h3>' + title +'</h3><a href="' + link +'">Link</a></div>');
+        $("#list").append('<a href="' + link +'"><div><h2>' + title +'</h2><i class="fa fa-caret-square-o-right"></i></div></a>');
     });
 }
