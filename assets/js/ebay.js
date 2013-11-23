@@ -34,9 +34,9 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	var minPrice = 99999999;
 	
 	$(xml).find("item").each(function() {
-	    var condition =  $(this).find("condition").text();
+	    var condition =  $(this).find("conditionDisplayName").text();
 	    console.log(condition);
-	    if((condition == 'New') || (condition == 'New other (see details)')){
+	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
 		var currentPrice = $(this).find("currentPrice").text();
 		currentPrice = parseInt(currentPrice);
 		
