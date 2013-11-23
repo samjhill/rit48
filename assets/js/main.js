@@ -7,6 +7,7 @@ var ebayHighPrice = 0;
 var ebayAvgPrice = 0;
 var ebayLowPrice = 0;
 
+var priceList = new Array();
 var clComplete = false;
 var ebayComplete = false;
 
@@ -131,7 +132,6 @@ function findEbayItem(search){
 	var price = 0;
 	var maxPrice = -1;
 	var minPrice = 99999999;
-	var priceList = new Array();
 	
 	
 	
