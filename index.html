@@ -53,7 +53,8 @@ header('X-Frame-Options: GOFORIT');
   </header>
     
     <div id="main">
-        <button type="button" onclick="findProducts('iphone5');">List xml</button>
+        <input id="searchBox"></input>
+        <button type="button" onclick="findProducts(document.getElementById('searchBox').value);">Get info</button>
         <div id="content"></div>
         <!--<div class="panel-group" id="accordion">
             <div id="list"></div>

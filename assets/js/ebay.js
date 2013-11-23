@@ -17,7 +17,7 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
             
            $.ajax({
 		type: "GET",
-		url: "assets/php/proxyEbay.php",
+		url: "assets/php/proxyEbay.php?search=" + search,
 		dataType: "xml",
 		success: parseXml
 	     });
