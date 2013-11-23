@@ -66,11 +66,19 @@ header('X-Frame-Options: GOFORIT');
             <div id="list"></div>
         </div>
     </div>
-
+    
+    
     <script src="assets/libraries/jquery/jquery-2.0.3.min.js"></script>
     <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>  
     <script src="assets/libraries/slider/js/bootstrap-slider.js"></script>
     <script src="assets/js/sliderFile.js"></script>
+    
+    <script>
+        //initialize keydown search
+        $("#searchBox").keyup(function(e){
+            console.log('key pressed' + e)
+            });
+    </script>
     
 </body>
 
