@@ -22,6 +22,8 @@ function search(_query){
 //  _title: title of the post
 function generatePost(_link, _price, _title){
     
+    console.log('generate post called');
+    
     //collapse code
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
