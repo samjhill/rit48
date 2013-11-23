@@ -41,7 +41,7 @@ function parseXml(xml) {
 function generatePost(_link, _price, _title){
     
     //collapse code
-    $("#list").append(' <div onclick="location.href="#collapse' + numPosts + ';" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
+    $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos; class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
     body += '<p>Ebay average price: $x </p>';
