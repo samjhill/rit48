@@ -32,5 +32,5 @@ function parseXml(xml) {
 //  _price: the price to purchase the item
 //  _title: title of the post
 function generatePost(_link, _price, _title){
-    $("#list").append('<a href="' + _link +'"><span class="post" style="display:block;"><h3 class="title">' + _title +'</h3><p>Price: ' + _price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
+    $("#list").append('<a class="postLink" href="' + _link +'"><span class="post" style="display:block;"><h3 class="title">' + _title +'</h3><p>Price: ' + _price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
 }

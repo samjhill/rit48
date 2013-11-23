@@ -11,12 +11,12 @@
     padding: 1em;
 }
 
-.post > a{
+.postLink{
     color: #333333;
     text-decoration: none;
 }
 
-.post > a:hover{
+.postLink{
     color: #333333;
     text-decoration: none;
     cursor: pointer;
