@@ -5,7 +5,7 @@ var numPosts = 0;
 var craigslistItems = new Array();
 var ebayHighPrice = 0;
 var ebayAvgPrice = 0;
-var ebayLowPrice = 999999999;
+var ebayMinPrice = 999999999;
 
 var clComplete = false;
 var ebayComplete = false;
@@ -32,7 +32,7 @@ function generatePost(_link, _price, _title){
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
     body += '<p>High: $' + getHighPrice() + '</p>';
     body += '<p>Average: $' + getAvgPrice() + '</p>';
-    body += '<p>Low: $' + getLowPrice() + '</p>';
+    body += '<p>M: $' + getMinPrice() + '</p>';
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $' + (getAvgPrice() - _price) + '</p>';
 
