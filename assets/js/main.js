@@ -146,6 +146,7 @@ function findEbayItem(search){
         
         $('#list').find("highPrice").each(function(){
             $(this).append(ebayHighPrice);
+            console.log('wrote high price: ' + ebayHighPrice);
         });
         
         ebayComplete = true;
