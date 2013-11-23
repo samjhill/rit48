@@ -27,9 +27,5 @@
 }
 
 .navbar-brand{
-height: 10vh;
-}
-
-.navbar-toggle{
-height: 10vh;
+font-size: xx-large;
 }
