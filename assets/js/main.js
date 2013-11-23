@@ -13,18 +13,20 @@ function search(_query){
     findEbayItem(_query);
     
     if (!clComplete) {
-        setTimeout(search,100);
+        setTimeout(search, 200);
     }
     else{
         console.log(craigslistItems);
     }
     
     if (!ebayComplete) {
-        setTimeout(search,100);
+        setTimeout(search, 200);
     }
     else{
         console.log(ebayItem);
     }
+    
+    
 }
 
 
@@ -60,7 +62,7 @@ function parseXml(xml) {
         if ( priceInt >= 0 ) {
             items.push( new Object(link, priceInt, prettyTitle));
         }
-        console.log(items);
+        //console.log(items);
         craigslistItems = items;
         clComplete = true;
     });
