@@ -7,6 +7,7 @@ var ebayHighPrice = 0;
 var ebayAvgPrice = 0;
 var ebayLowPrice = 0;
 
+var priceList = new Array();
 var clComplete = false;
 var ebayComplete = false;
 
@@ -55,7 +56,7 @@ function generatePost(_link, _price, _title){
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
     
-    $("#list").append('');
+    //$("#list").append('');
                       
     numPosts++;
 }
@@ -138,7 +139,6 @@ function findEbayItem(search){
 	var price = 0;
 	var maxPrice = -1;
 	var minPrice = 99999999;
-	var priceList = new Array();
 	
 	
 	
