@@ -181,7 +181,7 @@ function findEbayItem(search){
 	//go through price list, drop lower tail of stdev
 	//anything that's less than the avg-(stdev*2)
 	standardizedSum = 0;
-	var lowerTail = avgPrice - (stdev*2)
+	var lowerTail = avgPrice - stdev;
 	console.log('lower tail: ' + lowerTail);
 	for( var i = 0; i < priceList.length; i++){
 	    if (priceList[i] < lowerTail) {
