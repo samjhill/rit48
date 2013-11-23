@@ -173,7 +173,7 @@ function findEbayItem(search){
 	//console.log('test of difference: ' + (priceList[1] - avgPrice));
 	console.log('sum: '+ sum);
 	console.log('avg price: ' + avgPrice);
-	console.log( 'price list before culling: ' + priceList );
+	console.log( 'price list before culling: ' + priceList.length );
 	console.log('stdev: ' + stdev);
 	console.log('price: ' + price);
 	console.log('num: ' + numItems);
@@ -181,8 +181,10 @@ function findEbayItem(search){
 	//go through price list, drop lower tail of stdev
 	//anything that's less than the avg-(stdev*2)
 	standardizedSum = 0;
+	var lowerTail = avgPrice - (stdev*2)
+	console.log('lower tail: ' + lowerTail);
 	for( var i = 0; i < priceList.length; i++){
-	    if (priceList[i] < (avgPrice - (stdev*2))) {
+	    if (priceList[i] < lowerTail) {
 		//find index of item
 		var index = priceList.indexOf(priceList[i]);
 		//remove the item
@@ -193,7 +195,7 @@ function findEbayItem(search){
 		standardizedSum += priceList[i];
 	    }
 	}
-	console.log( 'price list after culling: ' + priceList );
+	console.log( 'price list after culling: ' + priceList.length );
 	
         ebayHighPrice = Math.max(priceList);
         ebayAvgPrice = standardizedSum / priceList.length;
