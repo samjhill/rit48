@@ -162,12 +162,13 @@ function findEbayItem(search){
 	var stddev = 0;
 	var sum = 0;
 	for( var i = 0; i < priceList.length; i++){
+	    
 	    var difference = priceList[i] - avgPrice;
-	    sum += Math.pow(difference , 2);
+	    sum += difference * difference;
 	}
 	
 	stdev = Math.pow(sum, 1/2);
-	
+	console.log('test of difference: ' + priceList[1] - avgPrice);
 	console.log('sum: '+ sum);
 	console.log('avg price: ' + avgPrice);
 	console.log( 'price list: ' + priceList );
