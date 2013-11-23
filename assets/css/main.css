@@ -25,6 +25,11 @@
     font-size: 24pt;
     margin-top: -2.5em;
 }
-.navbar-header{
+
+.navbar-brand{
+height: 10vh;
+}
+
+.navbar-toggle{
 height: 10vh;
 }
