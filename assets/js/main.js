@@ -44,6 +44,7 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<iframe src="' + _link +'"></iframe>';
+    
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div></div></div>');
     
