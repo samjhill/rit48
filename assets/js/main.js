@@ -166,7 +166,7 @@ function findEbayItem(search){
 	var sum = 0;
 	for( var i = 0; i < 30; i++){
 	    var difference = priceList[i] - sAvgPrice;
-	    sum += difference * difference;
+	    sum += difference * difference/30;
 	}
 	
 	stdev = Math.pow(sum, 1/2);
