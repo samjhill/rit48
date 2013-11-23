@@ -14,11 +14,11 @@ function parseXml(xml) {
         var title = title.substr(title.indexOf("$") + 4);
         //parse price out of title
         var price = title.substr(title.indexOf("$"), title.indexOf(" "));
-        
+        console.log(parseInt(price));
         //this will get rid of TRADE items
-        if (parseInt(price) >= 0) {
+        //if (parseInt(price) >= 0) {
             $("#list").append('<a href="' + link +'"><span style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
-        }
+        //}
         
     });
 }
