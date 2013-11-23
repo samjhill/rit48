@@ -11,7 +11,7 @@ var clComplete = false;
 var ebayComplete = false;
 
 //initialize keydown search
-$('#searchBox').keydown(console.log('key pressed'));
+$("#searchBox").keydown(console.log('key pressed'));
 
 function search(_query){
     findCraigslistProducts(_query);
