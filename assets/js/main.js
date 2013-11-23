@@ -144,7 +144,7 @@ function findEbayItem(search){
         ebayAvgPrice = avgPrice;
         ebayLowPrice = minPrice;
         
-        $('#list').find("highPrice").each(function(){
+        $('#highPrice').each(function(){
             $(this).append(ebayHighPrice);
             console.log('wrote high price: ' + ebayHighPrice);
         });
