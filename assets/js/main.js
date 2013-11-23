@@ -1,6 +1,6 @@
 $.ajax({
     type: "GET",
-    url: "../php/proxy.php",
+    url: "assets/php/proxy.php",
     dataType: "xml",
     success: parseXml
  });
