@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+    
 <head>
     <title>Index - Craigslist x Ebay</title>
     <link type="text/css" rel="stylesheet" href="assets/libraries/font-awesome/css/font-awesome.css" />
@@ -60,25 +61,77 @@
     <script src="assets/js/main.js"></script>
     
     
-    WELCOME <br>
-    Please input your data so that we can begin finding you money making opportunities! <br>
+    <h1>WELCOME</h1><br>
+    <h2>Please input your data so that we can begin finding you money making opportunities!</h2><br>
     
-    <div class="input-group">
-  <span class="input-group-addon">Zipcode</span>
-  <input type="text" class="form-control" placeholder="#####">
+    <form class="well span8">
+    <div class="row">
+        <div class="span3">
+            <label>Zipcode:</label>
+            <input type="text" class="span3" placeholder="#####">
+	</div>
+	<div class="span3">
+            <label>Distance willing to travel:</label>
+	    <div class="radio">
+		<label>
+		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+		5 miles
+		</label>
+	    </div>
+	    <div class="radio">
+		<label>
+		<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+		10 miles
+		</label>
+	    </div>
+	    <div class="radio">
+		<label>
+		<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+		25 miles
+		</label>
+	    </div>
+	    <div class="radio">
+	        <label>
+	        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+		50 miles
+		</label>
+	    </div>
+	</div>
+	<div class="span3">
+	    <label>Car MPG:</label>
+	    <input type="text" class="span3"  placeholder="##.#">
+        </div>
+        <div class="span3">
+            <label>Gas Price:</label>
+            <input type="text" class="span3" placeholder="#.##">
+        </div>
     </div>
-    
-    I am willing to travel:
-<select class="form-control">
-    <option value="one">2</option>
-    <option value="two">5</option>
-    <option value="three">10</option>
-    <option value="four">20</option>
-    <option value="five">50</option>
-</select>
-
-miles.
-    
+    <label>I'm interested in these feeds:</label> 
+    <div class="checkbox">
+	<label>
+	<input type="checkbox" value="">
+	Option one
+	</label>
+    </div>    
+        <div class="checkbox">
+	<label>
+	<input type="checkbox" value="">
+	Option two
+	</label>
+    </div>
+	    <div class="checkbox">
+	<label>
+	<input type="checkbox" value="">
+	Option three
+	</label>
+    </div>
+	        <div class="checkbox">
+	<label>
+	<input type="checkbox" value="">
+	Option four
+	</label>
+    </div>    
+    <button type="button" class="btn btn-default">Submit</button>    
+</form>
 </body>
-
 </html>
