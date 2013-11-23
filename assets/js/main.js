@@ -13,7 +13,7 @@ function parseXml(xml) {
         //parse title down so it's not super long
         var title = title.substr(title.indexOf("$") + 4);
         //parse price out of title
-        var price = title.substr(title.indexOf("$"), title.indexOf(" ","."));
+        var price = title.substr(title.indexOf("$"), title.indexOf(" "));
         
         //if (test) {
         //    //code
