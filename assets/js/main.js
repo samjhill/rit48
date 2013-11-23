@@ -14,11 +14,11 @@ var ebayComplete = false;
 
 function search(_query){
     //replace commas
-    _query.replace(/,/g,"&");
+    _query = _query.replace(/,/g,"&");
     //replace apostrophes
-    _query.replace(/'/g,"&");
+    _query = _query.replace(/'/g,"&");
     //replace white space with & for search awesomeness
-    _query.replace(/ /g,"&");
+    _query = _query.replace(/ /g,"&");
     
     findCraigslistProducts(_query);
     findEbayItem(_query);
