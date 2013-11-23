@@ -144,7 +144,10 @@ function findEbayItem(search){
         ebayAvgPrice = avgPrice;
         ebayLowPrice = minPrice;
         
-        $('#list').find("highPrice").append(ebayHighPrice);
+        $('#list').find("highPrice").each(function(){
+            $(this).append(ebayHighPrice);
+        });
+        
         ebayComplete = true;
 	//console.log('Highest price: ' + maxPrice);
 	//console.log('Average price: ' + avgPrice);
