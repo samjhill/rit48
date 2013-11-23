@@ -50,6 +50,6 @@
 	Option four
 	</label>
     </div>    
-    <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide(); $(&apos;#main&apos;).show();">Submit</button>    
+    <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide(); $(&apos;#main&apos;).attr("visibility", "visible");">Submit</button>    
 </form>';
 ?>
