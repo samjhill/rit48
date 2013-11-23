@@ -33,7 +33,7 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	$(xml).find("item").each(function() {
 	    var currentPrice = $(this).find("currentPrice").text();
 	    
-	    price += currentPrice;
+	    price += parseInt(currentPrice);
 	    numItems++;
 	});
 	console.log(price);
