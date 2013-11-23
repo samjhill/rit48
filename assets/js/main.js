@@ -49,7 +49,7 @@ function generatePost(_link, _price, _title){
     body += '<p>Profit: $x </p>';
 
     //item body
-    $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div></div><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</a></div>');
+    $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</a></div></div>');
     
     $("#list").append('');
                       
