@@ -37,7 +37,7 @@ function generatePost(_link, _price, _title){
     
     //collapse code
   //  $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
-    $("#list").append('<button type = "button" class = "btn btn-danger" data-toggle="collapse" data-target="#bod"> _price + _title </button>');
+    $("#list").append('<button type = "button" class = "btn btn-danger" data-toggle="collapse" data-target="#bod">'+ _price + _title+ '</button>');
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
     body += '<p>High: $<span class="highPrice">' + ebayHighPrice + '</span></p>';
     body += '<p>Average: $<span class="avgPrice">' + ebayAvgPrice + '</span></p>';
@@ -46,7 +46,7 @@ function generatePost(_link, _price, _title){
     body += '<p>Profit: $<span class="profit">' + _price + '</span></p>';
 
     //item body
-    $("#list").append('<div id="bod' + numPosts +'" class="collapse in"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
+    $("#list").append('<div id="bod' + numPosts +'" class="collapse">' + body + '<button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div>');
     
     $("#list").append('');
                       
