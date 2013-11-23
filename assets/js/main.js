@@ -13,14 +13,14 @@ function search(_query){
     findEbayItem(_query);
     
     if (!clComplete) {
-        setTimeout(wait,100);
+        setTimeout(search,100);
     }
     else{
         console.log(craigslistItems);
     }
     
     if (!ebayComplete) {
-        setTimeout(wait,100);
+        setTimeout(search,100);
     }
     else{
         console.log(ebayItem);
