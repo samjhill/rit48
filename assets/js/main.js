@@ -13,6 +13,13 @@ var ebayComplete = false;
 
 
 function search(_query){
+    //replace commas
+    _query.replace(/,/g,"&");
+    //replace apostrophes
+    _query.replace(/'/g,"&");
+    //replace white space with & for search awesomeness
+    _query.replace(/ /g,"&");
+    
     findCraigslistProducts(_query);
     findEbayItem(_query);
 
@@ -29,8 +36,8 @@ function generatePost(_link, _price, _title){
     console.log('generate post called');
     
     //collapse code
-   // $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
-    $("#list").append('<ul class = "nav nav-pills nav-stacked"><li><div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div></li></ul>');
+    $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
+   // $("#list").append('<ul class = "nav nav-pills nav-stacked"><li><div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div></li></ul>');
 	
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
     body += '<p>High: $<span class="highPrice">' + ebayHighPrice + '</span></p>';
