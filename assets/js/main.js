@@ -51,7 +51,7 @@ function generatePost(_link, _price, _title){
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div></div></div>');
     
-    $("#list").append('<a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '"');
+    $("#list").append('<a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</a>');
                       
     numPosts++;
 }
