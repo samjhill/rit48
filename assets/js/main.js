@@ -54,7 +54,7 @@ function findCraigslistProducts(search){
 }
 
 function parseXml(xml) {
-    //console.log(xml);
+    console.log(xml);
     $(xml).find("item").each(function() {
         var title = $(this).find("title").text();
         var link = $(this).find("link").text();
@@ -108,7 +108,7 @@ function findEbayItem(search){
         }
 	
 	function parseEbayXml(xml) {
-	//console.log(xml);
+	console.log(xml);
 	
 	var numItems = 0;
 	var price = 0;
