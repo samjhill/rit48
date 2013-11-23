@@ -3,7 +3,7 @@
 header('Content-type: application/xml');
 
 // Website url to open
-$daurl = 'http://www.craigslist.org/about/best/all/index.rss';
+$daurl = 'http://rochester.craigslist.org/ela/index.rss';
 
 // Get that website's content
 $handle = fopen($daurl, "r");
