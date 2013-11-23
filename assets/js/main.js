@@ -3,9 +3,9 @@
 
 var numPosts = 0;
 var craigslistItems = new Array();
-var ebayHighPrice;
-var ebayAvgPrice;
-var ebayLowPrice;
+var ebayHighPrice = 0;
+var ebayAvgPrice = 0;
+var ebayLowPrice = 0;
 
 var clComplete = false;
 var ebayComplete = false;
@@ -30,9 +30,9 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p>Ebay high price: $ </p>' + ebayHighPrice;
-    body += '<p>Ebay average price: $ </p>' + ebayAvgPrice;
-    body += '<p>Ebay low price: $ </p>' + ebayLowPrice;
+    body += '<p>High price: $' + ebayHighPrice + '</p>';
+    body += '<p>Average price: $' + ebayAvgPrice + '</p>';
+    body += '<p>Low price: $' + ebayLowPrice + '</p>';
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $ </p>' + (ebayAvgPrice - _price);
 
