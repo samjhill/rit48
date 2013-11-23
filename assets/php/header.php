@@ -10,6 +10,10 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">MiddleMan</a>
+      
+      <input class="input" id="searchBox" placeholder="Search Craigslist for an item"></input>
+      <button class="btn" type="button" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></button>
+        
     </div>
   
     <!-- Collect the nav links, forms, and other content for toggling -->
