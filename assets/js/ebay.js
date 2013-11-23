@@ -43,15 +43,16 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	    if(currentPrice < minPrice){
 		minPrice = currentPrice;
 	    }
-	    price += parseInt(currentPrice);
+	    price += currentPrice;
 	    numItems++;
 	});
+	var avgPrice = price / numItems;
 	
 	console.log('Highest price: ' + maxPrice);
-	console.log('Average price: ' + price);
+	console.log('Average price: ' + avgPrice);
 	console.log('Lowest price: ' + minPrice);
 	
 	console.log(numItems);
-	var avgPrice = price / numItems;
+	
 	$('#content').append('Average price: '+ avgPrice);
     }
