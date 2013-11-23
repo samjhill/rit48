@@ -6,7 +6,7 @@
 #main .title{
     margin-right: 2em;
     overflow: auto;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 #logo-place{
@@ -20,8 +20,8 @@
 
 #footer{
     position: relative;
-    margin-top: -150px;
-    height: 150px;
+    margin-top: -60px;
+    height: 60px;
     background: #333333;
     color: white;
     padding: .5em;
