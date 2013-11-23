@@ -1,8 +1,9 @@
 <?php
     echo '
-    
-    <img src="assets/img/logo.png" alt="logo" />
-    <h2>MiddleMan helps you find and flip items from Craigslist to Ebay for profit.</h2>
+    <div id="logo-place">
+        <img src="assets/img/logo.png" alt="logo" />
+        <h2>MiddleMan helps you find and flip items from Craigslist to Ebay for profit.</h2>
+    </div>
     
     <form class="well span8">
     <div class="row">
