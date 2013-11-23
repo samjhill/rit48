@@ -19,8 +19,8 @@
     </div>
     
     <div id="main">
-        <input class="input" id="searchBox"></input>
-        <button class="btn btn-primary" type="button" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);">Get info</button>
+        <input class="input" id="searchBox" placeholder="Search Craigslist for an item"></input>
+        <button class="btn btn-primary" type="button" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);"><i class="fa fa-icon-search"></i></button>
         
         <div class="panel-group" id="accordion" >
             <div id="list"></div>
