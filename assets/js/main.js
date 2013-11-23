@@ -156,9 +156,20 @@ function findEbayItem(search){
 		numItems++;
 	    }
 	});
-	
-	console.log( priceList );
 	var avgPrice = price / numItems;
+	console.log( priceList );
+	
+	//calculate stDev
+	var stddev = 0;
+	var sum = 0;
+	for( var i = 0; i < priceList.length; i++){
+	    sum = sum + Math.pow((priceList[i] - avgPrice) , 2);
+	}
+	stdev = Math.sqrt(sum);
+	
+	console.log('stdev: ' + stdev);
+	
+	
 	console.log('price' + price);
 	console.log('num' + numItems);
         ebayHighPrice = parseInt(maxPrice);
