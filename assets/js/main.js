@@ -166,7 +166,7 @@ function findEbayItem(search){
 	    //sum = sum + Math.pow((priceList[i] - avgPrice) , 2);
 	    sum = sum + (priceList[i] - avgPrice);
 	}
-	stdev = Math.sqrt(sum);
+	stdev = Math.pow(sum, 1/2);
 	
 	console.log('stdev: ' + stdev);
 	
