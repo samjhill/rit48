@@ -5,7 +5,7 @@ var numPosts = 0;
 var craigslistItems = new Array();
 var ebayHighPrice = 0;
 var ebayAvgPrice = 0;
-var ebayMinPrice = 999999999;
+var ebayLowPrice = 0;
 
 var clComplete = false;
 var ebayComplete = false;
@@ -30,11 +30,11 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p>High: $' + getHighPrice() + '</p>';
-    body += '<p>Average: $' + getAvgPrice() + '</p>';
-    body += '<p>M: $' + getMinPrice() + '</p>';
+    body += '<p>High: $' + ebayHighPrice + '</p>';
+    body += '<p>Average: $' + ebayAvgPrice + '</p>';
+    body += '<p>Low: $' + ebayLowPrice + '</p>';
     body += '<p>Gas expenses: $x </p>';
-    body += '<p>Profit: $' + (getAvgPrice() - _price) + '</p>';
+    body += '<p>Profit: $' + (ebayAvgPrice - _price) + '</p>';
 
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
@@ -118,6 +118,8 @@ function findEbayItem(search){
 	
 	var numItems = 0;
 	var price = 0;
+	var maxPrice = 0;
+	var minPrice = 99999999;
 	
 	$(xml).find("item").each(function() {
 	    var condition =  $(this).find("conditionDisplayName").text();
@@ -126,11 +128,11 @@ function findEbayItem(search){
 		var currentPrice = $(this).find("currentPrice").text();
 		currentPrice = parseInt(currentPrice);
 		
-		if(currentPrice > getHighPrice()){
-		    setHighPrice(currentPrice);
+		if(currentPrice > maxPrice){
+		    maxPrice = currentPrice;
 		}
-		if(currentPrice < getMinPrice()){
-		    setMinPrice(currentPrice);
+		if(currentPrice < minPrice){
+		    minPrice = currentPrice;
 		}
 		price += currentPrice;
 		numItems++;
@@ -138,7 +140,9 @@ function findEbayItem(search){
 	});
 	var avgPrice = price / numItems;
 	
-        setAvgPrice(avgPrice);
+        ebayHighPrice = maxPrice;
+        ebayAvgPrice = avgPrice;
+        ebayLowPrice = minPrice;
         
         ebayComplete = true;
 	//console.log('Highest price: ' + maxPrice);
@@ -150,33 +154,6 @@ function findEbayItem(search){
 	//$('#content').append('<p>Highest price: '+ maxPrice + '</p>');
 	//$('#content').append('<p>Average price: '+ avgPrice + '</p>');
 	//$('#content').append('<p>Lowest price: '+ minPrice + '</p>');
-}
-
-/////
-//getters
-////
-function getHighPrice(){
-    return ebayHighPrice;
-}
-
-function getAvgPrice(){
-    return ebayAvgPrice;
-}
-function getMinPrice(){
-    return ebayMinPrice;
-}
-
-////
-//setters
-////
-function setHighPrice(_number){
-    ebayHighPrice = _number;
-}
-function setAvgPrice(_number){
-    ebayAvgPrice = _number;
-}
-function setMinPrice(_number){
-    ebayMinPrice = _number;
 }
 //////
 //
