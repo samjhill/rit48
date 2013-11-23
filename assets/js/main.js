@@ -30,9 +30,9 @@ function generatePost(_link, _price, _title){
     $("#list").append(' <div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
     var body = '<a href="' + _link +'">Link to Craigslist post</a>';
-    body += '<p><span class="highPrice">High: $' + ebayHighPrice + '</span></p>';
-    body += '<p><span class="avgPrice">Average: $' + ebayAvgPrice + '</span></p>';
-    body += '<p><span class="lowPrice">Low: $' + ebayLowPrice + '</span></p>';
+    body += '<p>High: $<span class="highPrice">' + ebayHighPrice + '</span></p>';
+    body += '<p>Average: $<span class="avgPrice">' + ebayAvgPrice + '</span></p>';
+    body += '<p>Low: $<span class="lowPrice">' + ebayLowPrice + '</span></p>';
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $' + (ebayAvgPrice - _price) + '</p>';
 
