@@ -33,6 +33,7 @@
     <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>  
     <script src="assets/libraries/slider/js/bootstrap-slider.js"></script>
     <script src="assets/js/sliderFile.js"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
     
     <script>
         //initialize keydown search
