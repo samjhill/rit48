@@ -36,7 +36,8 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	    price += currentPrice;
 	    numItems++;
 	});
-	
+	console.log(price);
+	console.log(numItems);
 	var avgPrice = price / numItems;
 	$('#content').append('Average price: '+ avgPrice);
     }
