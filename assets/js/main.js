@@ -43,7 +43,7 @@ function generatePost(_link, _price, _title){
     //collapse code
     $("#list").append(' <div class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div>');
     
-    var body = '<iframe src="' + _link +'"></iframe>';
+    var body = '<a href="' + _link +'">Link to Craigslist post</a>';
     body += '<p>Ebay average price: $x </p>';
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $x </p>';
