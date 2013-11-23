@@ -26,5 +26,5 @@ function parseXml(xml) {
 }
 
 function generatePost(_link, _price, _title){
-    $("#list").append('<a href="' + _link +'"><span class="post" style="display:block;"><h2>' + _title +'</h2><p>Price: ' + _price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
+    $("#list").append('<a href="' + _link +'"><span class="post" style="display:block;"><h3>' + _title +'</h3><p>Price: ' + _price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
 }
