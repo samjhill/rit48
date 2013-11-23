@@ -10,6 +10,6 @@ function parseXml(xml) {
     $(xml).find("item").each(function() {
         var title = $(this).find("dc:title").text();
         var link = $(this).find("link").text();
-        $("#list").append('<a href="' + link +'"><div><h2>' + title +'</h2><i class="fa fa-caret-square-o-right"></i></div></a>');
+        $("#list").append('<div onclick="window.location="' + link +'"><h2>' + title +'</h2><a href="' + link +'"><i class="fa fa-caret-square-o-right"></i></a></div>');
     });
 }
