@@ -485,8 +485,8 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 .dropdown-header{display:block;padding:3px 20px;font-size:12px;line-height:1.428571429;color:#999999;}
 .dropdown-backdrop{position:fixed;left:0;right:0;bottom:0;top:0;z-index:990;}
 .pull-right>.dropdown-menu{right:0;left:auto;}
-.dropup .caret,.navbar-fixed-bottom .dropdown .caret{border-top:0 dotted;border-bottom:4px solid #000000;content:"";}
-.dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:1px;}
+.dropup .caret,.navbar-fixed-bottom .dropdown .caret{border-top:0 dotted;border-bottom:16px solid #000000;content:"";}
+.dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:4px;}
 @media (min-width:992){.navbar-right .dropdown-menu{right:0;left:auto;}}.btn-default .caret{border-top-color:#333333;}
 .btn-primary .caret,.btn-success .caret,.btn-warning .caret,.btn-danger .caret,.btn-info .caret{border-top-color:#fff;}
 .dropup .btn-default .caret{border-bottom-color:#333333;}
@@ -582,7 +582,7 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 .nav .caret{border-top-color:#428bca;border-bottom-color:#428bca;}
 .nav a:hover .caret{border-top-color:#2a6496;border-bottom-color:#2a6496;}
 .nav-tabs .dropdown-menu{margin-top:-1px;border-top-right-radius:0;border-top-left-radius:0;}
-.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent;}.navbar:before,.navbar:after{content:" ";display:table;}
+.navbar{position:relative;min-height:200px;margin-bottom:20px;border:1px solid transparent;}.navbar:before,.navbar:after{content:" ";display:table;}
 .navbar:after{clear:both;}
 .navbar:before,.navbar:after{content:" ";display:table;}
 .navbar:after{clear:both;}
