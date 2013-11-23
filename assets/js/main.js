@@ -140,9 +140,9 @@ function findEbayItem(search){
 	});
 	var avgPrice = price / numItems;
 	
-        ebayHighPrice = maxPrice;
-        ebayAvgPrice = avgPrice;
-        ebayLowPrice = minPrice;
+        ebayHighPrice = parseInt(maxPrice);
+        ebayAvgPrice = parseInt(avgPrice);
+        ebayLowPrice = parseInt(minPrice);
         
         $('.highPrice').each(function(){
             $(this).empty();
