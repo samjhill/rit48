@@ -183,10 +183,15 @@ function findEbayItem(search){
 	standardizedSum = 0;
 	for( var i = 0; i < priceList.length; i++){
 	    if (priceList[i] < (avgPrice - (stdev*2))) {
+		//find index of item
+		var index = priceList.indexOf(priceList[i]);
 		//remove the item
-		priceList[i].pop0();
+		priceList.splice(index, 1);
 	    }
-	    standardizedSum += priceList[i];
+	    else{
+		//the number is within boundaries, keep it
+		standardizedSum += priceList[i];
+	    }
 	}
 	
         ebayHighPrice = Math.max(priceList);
