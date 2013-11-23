@@ -16,6 +16,11 @@
     margin-right: auto;
 }
 
+#footer{
+    background: #333333;
+    color: white;
+}
+
 .post{
     padding: 1em;
 }
