@@ -240,7 +240,7 @@ function findEbayItem(search){
         $('.profit').each(function(){
             var cost = parseInt($(this).text());
 	    $(this).empty();
-            $(this).append(ebayAvgPrice - cost);
+            $(this).append(Math.round((ebayAvgPrice - cost) * 100) /100 );
         });
         
         ebayComplete = true;
