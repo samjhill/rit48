@@ -13,7 +13,7 @@ function parseXml(xml) {
         //parse title down so it's not super long
         var title = title.substr(title.indexOf("$") + 4);
         //parse price out of title
-        var price = Number(currency.replace(/[^0-9\.]+/g,""));
+        var price = Number(title.replace(/[^0-9\.]+/g,""));
         $("#list").append('<a href="' + link +'"><span style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
     });
 }
