@@ -10,8 +10,10 @@ function parseXml(xml) {
     $(xml).find("item").each(function() {
         var title = $(this).find("title").text();
         var link = $(this).find("link").text();
-        //parse cost out of title, need to update it out of +4 to something dynamic
-        var price = title.substr(title.indexOf("$") + 4);
+        //parse title down so it's not super long
+        var title = title.substr(title.indexOf("$") + 4);
+        //parse price out of title
+        var price = title.substr(title.indexOf("$") + 3);
         $("#list").append('<a href="' + link +'"><span style="display:block;"><h2>' + title +'</h2><p>Price: ' + price + '</p><i class="fa fa-caret-square-o-right pull-right"></i></span></a>');
     });
 }
