@@ -2,7 +2,7 @@
     echo '
     <div id="logo-place">
         <img src="assets/img/logo.png" alt="logo" />
-        <h2>MiddleMan helps you find and flip items from Craigslist to Ebay for profit.</h2>
+        <h2>MiddleMan helps you find and flip items from Craigslist to eBay for profit.</h2>
     </div>
     
     <form class="well span8">
@@ -50,6 +50,6 @@
 	Option four
 	</label>
     </div>    
-    <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide();>Submit</button>    
+    <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide();">Submit</button>    
 </form>';
 ?>
