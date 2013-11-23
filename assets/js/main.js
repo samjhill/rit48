@@ -46,13 +46,6 @@ function generatePost(_link, _price, _title){
     body += '<p>Gas expenses: $x </p>';
     body += '<p>Profit: $<span class="profit">' + _price + '</span></p>';
     
-	$("#sparkline").sparkline( [ebayLowPrice,((ebayAvgPrice-ebayLowPrice)/2),ebayAvgPrice,((ebayHighPrice-ebayAvgPrice)/2),ebayHighPrice], {
-    type: 'box',
-    raw: false,
-    target: ebayAvgPrice,
-    minValue: ebayLowPrice,
-    maxValue: ebayHighPrice});
-
     //item body
     $("#list").append('<div id="collapse' + numPosts +'" class="panel-collapse collapse"><div class="panel-body">' + body + '</div><button class="btn" data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts + '">Close</button></div></div>');
     
@@ -251,6 +244,14 @@ function findEbayItem(search){
         });
         
         ebayComplete = true;
+	
+	$("#sparkline").sparkline( [ebayLowPrice,((ebayAvgPrice-ebayLowPrice)/2),ebayAvgPrice,((ebayHighPrice-ebayAvgPrice)/2),ebayHighPrice], {
+	    type: 'box',
+	    raw: false,
+	     target: ebayAvgPrice,
+	     minValue: ebayLowPrice,
+	     maxValue: ebayHighPrice});
+		
 	////console.log('Highest price: ' + maxPrice);
 	////console.log('Average price: ' + avgPrice);
 	////console.log('Lowest price: ' + minPrice);
