@@ -11,7 +11,7 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
     //Shopping Bit of API
 
         //Find Popular Items
-        function findProducts(search){
+        function findEbayProducts(search){
             
             
             
@@ -58,7 +58,7 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	
 	//console.log(numItems);
 	
-	$('#content').append('<p>Highest price: '+ maxPrice + '</p>');
-	$('#content').append('<p>Average price: '+ avgPrice + '</p>');
-	$('#content').append('<p>Lowest price: '+ minPrice + '</p>');
+	//$('#content').append('<p>Highest price: '+ maxPrice + '</p>');
+	//$('#content').append('<p>Average price: '+ avgPrice + '</p>');
+	//$('#content').append('<p>Lowest price: '+ minPrice + '</p>');
     }

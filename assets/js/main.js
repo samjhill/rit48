@@ -3,13 +3,29 @@
 
 var numPosts = 0;
 
+function search(_query){
+    var craigslistItems = findCraigslistProducts(_query);
+    var ebayItems = findEbayProducts(_query);
+    console.log(craigslistItems);
+    console.log(ebayItems);
+    
+    
+}
 
-$.ajax({
-    type: "GET",
-    url: "assets/php/proxy.php",
-    dataType: "xml",
-    success: parseXml
- });
+
+//////
+//
+//   START CRAIGSLIST STUFF
+//
+//////
+function findCraigslistProducts(search){
+    $.ajax({
+        type: "GET",
+        url: "assets/php/proxy.php?search=" + search,
+        dataType: "xml",
+        success: parseXml
+     });
+}
 
 function parseXml(xml) {
     console.log(xml);
@@ -24,13 +40,89 @@ function parseXml(xml) {
         
         var priceInt = parseInt(price.substr(1));
         
+        var items = new Array();
         //this will get rid of TRADE items
         if ( priceInt >= 0 ) {
-            generatePost(link, priceInt, prettyTitle);
+            items.push( new Object(link, priceInt, prettyTitle));
         }
         
+        return items;
     });
 }
+
+//////
+//
+//   END CRAIGSLIST STUFF
+//
+//////
+
+
+
+//////
+//
+//   START EBAY STUFF
+//
+//////
+function findEbayProducts(search){
+            
+            
+            
+           $.ajax({
+		type: "GET",
+		url: "assets/php/proxyEbay.php?search=" + search,
+		dataType: "xml",
+		success: parseXml
+	     });
+	     
+	     
+        }
+	
+	function parseEbayXml(xml) {
+	console.log(xml);
+	
+	var numItems = 0;
+	var price = 0;
+	var maxPrice = 0;
+	var minPrice = 99999999;
+	
+	$(xml).find("item").each(function() {
+	    var condition =  $(this).find("conditionDisplayName").text();
+	    //console.log(condition);
+	    if((condition == 'New') || (condition == 'New other (see details)') || (condition == 'Manufacturer refurbished') || (condition == 'Used')){
+		var currentPrice = $(this).find("currentPrice").text();
+		currentPrice = parseInt(currentPrice);
+		
+		if(currentPrice > maxPrice){
+		    maxPrice = currentPrice;
+		}
+		if(currentPrice < minPrice){
+		    minPrice = currentPrice;
+		}
+		price += currentPrice;
+		numItems++;
+	    }
+	});
+	var avgPrice = price / numItems;
+	
+        var item = new Array();
+        item.push(maxPrice);
+        item.push(avgPrice);
+        item.push(minPrice);
+	//console.log('Highest price: ' + maxPrice);
+	//console.log('Average price: ' + avgPrice);
+	//console.log('Lowest price: ' + minPrice);
+	
+	//console.log(numItems);
+	
+	//$('#content').append('<p>Highest price: '+ maxPrice + '</p>');
+	//$('#content').append('<p>Average price: '+ avgPrice + '</p>');
+	//$('#content').append('<p>Lowest price: '+ minPrice + '</p>');
+//////
+//
+//   END EBAY STUFF
+//
+//////
+
 
 //generates a post to append to the list
 //then appends it to the list

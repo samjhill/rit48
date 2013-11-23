@@ -3,7 +3,7 @@
 header('Content-type: application/xml');
 
 // Website url to open
-$daurl = 'http://rochester.craigslist.org/search/?areaID=126&catAbb=sss&query=iphone&sort=rel&format=rss';
+$daurl = 'http://rochester.craigslist.org/search/?areaID=126&catAbb=sss&query=' . $_GET["search"] . '&sort=rel&format=rss';
 
 // Get that website's content
 $handle = fopen($daurl, "r");
