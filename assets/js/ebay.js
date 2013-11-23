@@ -27,12 +27,17 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
 	
 	function parseXml(xml) {
 	console.log(xml);
+	
+	var numItems = 0;
+	var price = 0;
 	$(xml).find("item").each(function() {
-	    var title = $(this).find("title").text();
-	    var link = $(this).find("link").text();
+	    var currentPrice = $(this).find("currentPrice").text();
 	    
-	    $('#content').append(title);
+	    price += currentPrice;
 	});
+	
+	var avgPrice = prive / numItems;
+	$('#content').append('Average price: '+ avgPrice);
     }
         //Find Products
         //Get Multiple Items
