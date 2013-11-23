@@ -3,7 +3,7 @@
 header('Content-type: application/xml');
 
 // Website url to open
-$daurl = 'http://rochester.craigslist.org/search/sss?query=iphone%205%20unlocked&sort=rel&format=rss';
+$daurl = 'http://rochester.craigslist.org/moa/index.rss';
 
 // Get that website's content
 $handle = fopen($daurl, "r");
