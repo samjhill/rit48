@@ -76,7 +76,10 @@ header('X-Frame-Options: GOFORIT');
     <script>
         //initialize keydown search
         $("#searchBox").keyup(function(e){
-            console.log('key pressed' + e)
+                if (e.keycode == 13) {
+                    $('#list').empty();
+                    search(document.getElementById('searchBox').value);
+                }
             });
     </script>
     
