@@ -13,29 +13,27 @@ var sBa = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME
         //Find Popular Items
         function findProducts(search){
             
-            if (!search) {
-                search = "iphone5";
-            }
-            var request = sBa + "findItemsByKeywords" + VER + NAM + RES + PAY + "&keywords="+search;
-
-            $("#content").append("Request:  "+request);
             
-            $.ajax({
-	    url: request,
-	    dataType: 'XML',
-	    success: function(results){
-                alert("Success!");
-                    $(results).find("item").each(
-                        function(){
-                            var title = $(this).find("title").text;
-                            var price = $(this).find("currentPrice").text;
-                        
-                            $("#content").append("Title:  "+title+"  Price:  $"+price);
-                        }
-                    )
-                }
-            });
+            
+           $.ajax({
+		type: "GET",
+		url: "assets/php/proxyEbay.php",
+		dataType: "xml",
+		success: parseXml
+	     });
+	     
+	     
         }
+	
+	function parseXml(xml) {
+	console.log(xml);
+	$(xml).find("item").each(function() {
+	    var title = $(this).find("title").text();
+	    var link = $(this).find("link").text();
+	    
+	    $('#content').append(title);
+	});
+    }
         //Find Products
         //Get Multiple Items
         //Get Single Item
