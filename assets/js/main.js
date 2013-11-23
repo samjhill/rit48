@@ -212,9 +212,9 @@ function findEbayItem(search){
 	//console.log( 'higher than average: ' + higherThanAvg);
 	//console.log( 'lower than average: ' + lowerThanAvg);
 	
-        ebayHighPrice = Math.max(priceList);
+        ebayHighPrice = Math.max.apply(Math, priceList);
         ebayAvgPrice = standardizedSum / priceList.length;
-        ebayLowPrice = Math.min(priceList);
+        ebayLowPrice = Math.min.apply(Math, priceList);
         
 	console.log( ebayHighPrice );
 	console.log( ebayLowPrice );
