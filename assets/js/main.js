@@ -2,17 +2,29 @@
 //
 
 var numPosts = 0;
+var craigslistItems = new Array();
+var ebayItem = new Array();
+
+var clComplete = false;
+var ebayComplete = false;
 
 function search(_query){
-    var craigslistItems = findCraigslistProducts(_query);
-    var ebayItem = findEbayProducts(_query);
-    console.log(craigslistItems);
-    console.log(ebayItem);
+    findCraigslistProducts(_query);
+    findEbayItem(_query);
     
-    for(var i = 0; i < craigslistItems.length; i++){
-        //generatePost(craigslistItems[i].);
+    if (!clComplete) {
+        setTimeout(wait,100);
+    }
+    else{
+        console.log(craigslistItems);
     }
     
+    if (!ebayComplete) {
+        setTimeout(wait,100);
+    }
+    else{
+        console.log(ebayItem);
+    }
 }
 
 
@@ -49,7 +61,8 @@ function parseXml(xml) {
             items.push( new Object(link, priceInt, prettyTitle));
         }
         console.log(items);
-        return items;
+        craigslistItems = items;
+        clComplete = true;
     });
 }
 
@@ -66,7 +79,7 @@ function parseXml(xml) {
 //   START EBAY STUFF
 //
 //////
-function findEbayProducts(search){
+function findEbayItem(search){
             
             
             
@@ -111,7 +124,9 @@ function findEbayProducts(search){
         item.push(maxPrice);
         item.push(avgPrice);
         item.push(minPrice);
-        console.log(item);
+        
+        ebayItem = item;
+        ebayComplete = true;
 	//console.log('Highest price: ' + maxPrice);
 	//console.log('Average price: ' + avgPrice);
 	//console.log('Lowest price: ' + minPrice);
