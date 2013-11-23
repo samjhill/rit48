@@ -19,6 +19,8 @@
 #footer{
     background: #333333;
     color: white;
+    padding: .5em;
+    bottom: 0px;
 }
 
 .post{
