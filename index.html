@@ -59,8 +59,8 @@ header('X-Frame-Options: GOFORIT');
   </header>
     
     <div id="main">
-        <input class="input" id="searchBox"></input>
-        <button class="btn btn-primary" type="button" onkeydown="function enter(){console.log('key pressed');}" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);">Get info</button>
+        <input class="input" onkeydown="function enter(){console.log('key pressed');}" id="searchBox"></input>
+        <button class="btn btn-primary" type="button" onclick="$('#list').empty(); search(document.getElementById('searchBox').value);">Get info</button>
         
         <div class="panel-group" id="accordion">
             <div id="list"></div>
