@@ -71,7 +71,7 @@ function findEbayProducts(search){
 		type: "GET",
 		url: "assets/php/proxyEbay.php?search=" + search,
 		dataType: "xml",
-		success: parseXml
+		success: parseEbayXml
 	     });
 	     
 	     
@@ -148,3 +148,4 @@ function generatePost(_link, _price, _title){
     numPosts++;
 }
     
+}
