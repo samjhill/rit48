@@ -16,7 +16,7 @@
 	<div class="input-group">
 	    <input class="search-query form-control" type="search" id="searchBox" placeholder="Search products"></input>
 	    <span class="btn" type="submit" color="white" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></span>
-	<a href="trending.html"> <.h2>Trending</h2></a>
+	<a href="trending.html"> <h2 display="inline">Trending</h2></a>
         </div>
         
   
