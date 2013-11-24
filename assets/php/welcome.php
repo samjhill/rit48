@@ -11,16 +11,16 @@
             <label>Zipcode:</label>
             <input type="text" class="span3 form-control" placeholder="12345">
 	</div>
-	<div class="span3">
+	<div class="">
             <label>Distance willing to travel:</label>
 	    <ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="300" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
 	</div>
-	<div class="span3">
+	<div class="">
 	    <label>Car MPG:</label>
 	    <input type="text" class="span3 form-control"  placeholder="23.4">
         </div>
-        <div class="span3">
+        <div class="">
             <label>Gas Price:</label>
             <input type="text" class="span3 form-control" placeholder="3.45">
         </div>
