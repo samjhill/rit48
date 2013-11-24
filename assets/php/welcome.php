@@ -9,7 +9,7 @@
     <div class="row">
         <div class="span3">
             <label>Zipcode:</label>
-            <input type="text" class="span3" placeholder="#####">
+            <input type="text" class="span3 form-control" placeholder="12345">
 	</div>
 	<div class="span3">
             <label>Distance willing to travel:</label>
@@ -18,11 +18,11 @@
 	</div>
 	<div class="span3">
 	    <label>Car MPG:</label>
-	    <input type="text" class="span3"  placeholder="##.#">
+	    <input type="text" class="span3 form-control"  placeholder="23.4">
         </div>
         <div class="span3">
             <label>Gas Price:</label>
-            <input type="text" class="span3" placeholder="#.##">
+            <input type="text" class="span3 form-control" placeholder="3.45">
         </div>
     </div>
     <label>I&apos;m interested in these feeds:</label> 
