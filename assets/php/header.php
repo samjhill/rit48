@@ -40,8 +40,8 @@
 		<small>
 		<ul class = "subtext">
 		<!-- add these dynamically -->
-		<a href = "#"><i class="fa fa-times" style="color:white;"></i></a> Electronics <br/>
-		<a class = "highlighted" href = "#"><i class="fa fa-plus"></i> Add Feed </a>
+		<a href "#" style="color:red;"><i class="fa fa-times" style="color:red;"></i></a> Electronics <br/>
+		<a class = "highlighted" href = "#"><i class="fa fa-plus" style="color:green;"></i> Add Feed </a>
 		</ul>
 		</small>
 		</li>
