@@ -26,7 +26,7 @@
         <!-- This is where the user&apos;s curr loc will go -->
         <li><a href="#"><h3>Rochester</h3>
 		<small>(change location) </small></a></li>
-        <li><a href="#"><h3>Radius</h3></a></li>
+        <li><a href="#"><h3>Search radius</h3></a></li>
 		<small>
 		<ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="300" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
