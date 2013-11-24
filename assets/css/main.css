@@ -34,6 +34,16 @@
     padding-top:20px;
 }
 
+#welcome{
+    margin: 1em;
+}
+
+#welcome div{
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1.5em;
+}
+
 .post{
     padding: 1em;
 }

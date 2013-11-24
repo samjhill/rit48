@@ -9,47 +9,51 @@
     <div class="row">
         <div class="span3">
             <label>Zipcode:</label>
-            <input type="text" class="span3" placeholder="#####">
+            <input type="text" class="span3 form-control" placeholder="12345">
 	</div>
-	<div class="span3">
+	<div class="">
             <label>Distance willing to travel:</label>
 	    <ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="300" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
 	</div>
-	<div class="span3">
+	<div class="">
 	    <label>Car MPG:</label>
-	    <input type="text" class="span3"  placeholder="##.#">
+	    <input type="text" class="span3 form-control"  placeholder="23.4">
         </div>
-        <div class="span3">
+        <div class="">
             <label>Gas Price:</label>
-            <input type="text" class="span3" placeholder="#.##">
+            <input type="text" class="span3 form-control" placeholder="3.45">
         </div>
     </div>
-    <label>I&apos;m interested in these feeds:</label> 
-    <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Option one
-	</label>
-    </div>    
+    
+    <div id="feeds">
+        <label>I&apos;m interested in these feeds:</label> 
         <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Option two
-	</label>
+            <label>
+            <input type="checkbox" value="">
+            Antiques
+            </label>
+        </div>    
+            <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">
+            Autos
+            </label>
+        </div>
+                <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">
+            Clothing
+            </label>
+        </div>
+                    <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">
+            Electronics
+            </label>
+        </div>
     </div>
-	    <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Option three
-	</label>
-    </div>
-	        <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Option four
-	</label>
-    </div>    
+    
     <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide();">Submit</button>    
 </form>';
 ?>
