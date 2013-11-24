@@ -16,8 +16,9 @@
 	<div class="input-group">
 	    <input class="search-query form-control" type="search" id="searchBox" placeholder="Search products"></input>
 	    <span class="btn" type="submit" color="white" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></span>
-	</div>
-        <a href="trending.html">Trending</a>
+	<a href="trending.html">Trending</a>
+        </div>
+        
   
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
