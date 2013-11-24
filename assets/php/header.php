@@ -16,7 +16,7 @@
 	<div class="input-group">
 	    <input class="search-query form-control" type="search" id="searchBox" placeholder="Search products"></input>
 	    <span class="btn" type="submit" color="white" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></span>
-	<a href="trending.html"> <h2 display="inline">Trending</h2></a>
+	<a href="trending.html">.h2Trending/.h2</a>
         </div>
         
   
@@ -40,7 +40,7 @@
 		<small>
 		<ul class = "subtext">
 		<!-- add these dynamically -->
-		<a href "#" style="color:red;"><i class="fa fa-times" style="color:red;"></i></a> Electronics <br/>
+		<a href "#" style="color:white;"><i class="fa fa-times" style="color:red;"></i></a> Electronics <br/>
 		<a class = "highlighted" href = "#"><i class="fa fa-plus" style="color:green;"></i> Add Feed </a>
 		</ul>
 		</small>
