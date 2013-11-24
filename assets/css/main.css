@@ -12,6 +12,7 @@
 #logo-place{
     
 }
+
 #logo-place img{
     display: block;
     margin-left: auto;
@@ -69,6 +70,10 @@
 
 .navbar-brand{
 font-size: xx-large;
+}
+
+.navbar i{
+    color: white;    
 }
 
 .panel{
