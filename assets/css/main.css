@@ -18,6 +18,10 @@
     margin-right: auto;
 }
 
+#searchBox{
+    width: 50%;
+}
+
 #footer{
     position: relative;
     margin-top: -60px;
