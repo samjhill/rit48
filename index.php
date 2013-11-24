@@ -42,6 +42,9 @@
         //initialize pretty checkboxes
         $('.checkbox').checkbox();
         
+        //initialize pretty sliders
+        $('.slider').slider();
+        
         //initialize keydown search
         $("#searchBox").keyup(function(e){
                 if (e.keyCode == 13) {

@@ -12,8 +12,8 @@
             <input type="text" class="span3 form-control" placeholder="12345">
 	</div>
 	<div class="">
-            <label>Distance willing to travel:</label>
-		<ul class ="slide"><input type="text" class="span2" value="20" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
+            <li><label>Distance willing to travel:</label></li>
+		<ul class="slide"><input type="text" class="span2" value="20" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
 	    </div>
 	<div class="">
