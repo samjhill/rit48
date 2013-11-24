@@ -29,6 +29,9 @@
     width: auto;
 }
 
+#submitButton{
+    margin-left: 2em;    
+}
 #footer{
     position: relative;
     margin-top: -60px;
