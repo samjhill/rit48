@@ -23,6 +23,11 @@ function search(_query){
     
     findCraigslistProducts(_query);
     findEbayItem(_query);
+    $('#list').append('<i id="loading" class="fa fa-spinner fa-spin"></i>');
+    $('#loading').hide();
+    while(ebayComplete == false){
+	$('#loading').show();
+    }
 
 }
 

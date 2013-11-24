@@ -21,7 +21,9 @@
     <div id="main">
         
         <div class="panel-group" id="accordion" >
-            <div id="list"></div>
+            <div id="list">
+                
+            </div>
         </div>
     </div>
     
