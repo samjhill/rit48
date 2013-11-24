@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/assets/php/index.php">MiddleMan</a>
+      <a class="navbar-brand" href="./">MiddleMan</a>
       
       <form role="form-search text-center">
         
