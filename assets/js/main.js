@@ -44,7 +44,7 @@ function generatePost(_link, _price, _title){
     //collapse code
 	$("#list").append('<ul class = "nav nav-pills nav-stacked"><li><div onclick="location.href=&apos;#collapse' + numPosts + ';&apos;" class="panel panel-default"><div class="panel-heading"> <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + numPosts +'">' + '$' + _price + ' - ' + _title +'</a></h4></div></li></ul>');
 	
-    var body = '<a href="' + _link +'">Link to Craigslist post</a>';
+    var body = '<a target="_blank" href="' + _link +'">Link to Craigslist post</a>';
     body += '<p>High: $<span class="highPrice">' + ebayHighPrice + '</span></p>';
     body += '<p>Average: $<span class="avgPrice">' + ebayAvgPrice + '</span></p>';
     body += '<p>Low: $<span class="lowPrice">' + ebayLowPrice + '</span></p>';
