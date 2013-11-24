@@ -249,7 +249,7 @@ function findEbayItem(search){
         
         ebayComplete = true;
 	
-	    	$(".chart").sparkline( priceList, {
+	$('.chart').sparkline( [ 45,68,80,93,14,35 ] , {
 	    type: 'box',
 	    raw: false,
 	    target: ebayAvgPrice,
