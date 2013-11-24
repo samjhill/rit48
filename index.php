@@ -39,6 +39,9 @@
     <script src="assets/js/jquery.sparkline.js"></script>
     
     <script>
+        //initialize pretty checkboxes
+        $('.checkbox').checkbox();
+        
         //initialize keydown search
         $("#searchBox").keyup(function(e){
                 if (e.keyCode == 13) {
