@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="assets/libraries/bootstrap/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="assets/libraries/font-awesome/css/font-awesome.css" />    
     <link type="text/css" rel="stylesheet" href="assets/libraries/slider/css/slider.css" />
+    <link type="text/css" rel="stylesheet" href="assets/libraries/bootstrap-checkbox/css/bootstrap-checkbox.css" />
     <link type="text/css" rel="stylesheet" href="assets/css/main.css"/>
     <script src="assets/js/main.js"></script>	
 </head>
@@ -31,7 +32,8 @@
     <?php include ('assets/php/footer.php'); ?>
     
     <script src="assets/libraries/jquery/jquery-2.0.3.min.js"></script>
-    <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/libraries/bootstrap-checkbox/js/bootstrap-checkbox.js"></script>
     <script src="assets/libraries/slider/js/bootstrap-slider.js"></script>
     <script src="assets/js/sliderFile.js"></script>
     <script src="assets/js/jquery.sparkline.js"></script>
