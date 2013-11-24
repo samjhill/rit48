@@ -11,9 +11,12 @@
       </button>
       <a class="navbar-brand" href="#">MiddleMan</a>
       
-      <input class="input" id="searchBox" placeholder="Search Craigslist"></input>
-      <button class="btn" type="button" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></button>
-        
+      <form role="form">
+        <div class="form-group">
+            <input class="form-control" id="searchBox" placeholder="Search products"></input>
+            <button class="btn" type="button" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></button>
+        </div>
+      </form> 
     </div>
   
     <!-- Collect the nav links, forms, and other content for toggling -->
