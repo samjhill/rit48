@@ -26,6 +26,7 @@
     </div>
     
     
+    <?php include ('assets/php/footer.php'); ?>
     
     <script src="assets/libraries/jquery/jquery-2.0.3.min.js"></script>
     <script src="assets/libraries/bootstrap/js/bootstrap.min.js"></script>  
