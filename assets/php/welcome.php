@@ -56,6 +56,6 @@
         </div>
     </div>
     
-    <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide();">Submit</button>    
+    <button type="button" class="btn btn-primary" onclick="$(&apos;#welcome&apos;).hide();">Let&apos;s go!</button>    
 </form>';
 ?>
