@@ -29,25 +29,25 @@
     <div class="checkbox">
 	<label>
 	<input type="checkbox" value="">
-	Option one
+	Antiques
 	</label>
     </div>    
         <div class="checkbox">
 	<label>
 	<input type="checkbox" value="">
-	Option two
+	Autos
 	</label>
     </div>
 	    <div class="checkbox">
 	<label>
 	<input type="checkbox" value="">
-	Option three
+	Clothing
 	</label>
     </div>
 	        <div class="checkbox">
 	<label>
 	<input type="checkbox" value="">
-	Option four
+	Electronics
 	</label>
     </div>    
     <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide();">Submit</button>    
