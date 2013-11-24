@@ -11,11 +11,12 @@
             <label>Zipcode:</label>
             <input type="text" class="span3 form-control" placeholder="12345">
 	</div>
-	<li><a href="#"><h3>Search Radius</h3></a></li>
-		<small>
-		<ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
+	<div class="">
+            <label>Distance willing to travel:</label>
+	    <small>
+		<ul class ="slide"><input type="text" class="span2" value="20" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
-		</small>
+	    </small>
 	    </div>
 	<div class="">
 	    <label>Car MPG:</label>
@@ -29,30 +30,27 @@
     
     <div id="feeds">
         <label>I&apos;m interested in these feeds:</label> 
-        <div>
+        <div class="checkbox">
             <label>
-            <input type="checkbox" class="checkbox" value="">
+            <input type="checkbox" value="">
             Antiques
             </label>
         </div>    
-        
-        <div>
+            <div class="checkbox">
             <label>
-            <input type="checkbox" class="checkbox" value="">
+            <input type="checkbox" value="">
             Autos
             </label>
         </div>
-        
-        <div>
+                <div class="checkbox">
             <label>
-            <input type="checkbox" class="checkbox" value="">
+            <input type="checkbox" value="">
             Clothing
             </label>
         </div>
-        
-        <div>
+                    <div class="checkbox">
             <label>
-            <input type="checkbox" class="checkbox" value="">
+            <input type="checkbox" value="">
             Electronics
             </label>
         </div>
