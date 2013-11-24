@@ -37,6 +37,11 @@
     margin: 1em;
 }
 
+#welcome div{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
 .post{
     padding: 1em;
 }
