@@ -13,7 +13,7 @@
       
       <form role="form-search text-center">
         <div class="input-append">
-            <input type="search" id="searchBox" placeholder="Search products"></input>
+            <input class="search-query" type="search" id="searchBox" placeholder="Search products"></input>
             <button class="btn" type="submit" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></button>
         </div>
       </form> 
