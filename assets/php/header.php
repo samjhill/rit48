@@ -11,7 +11,7 @@
       </button>
       <a class="navbar-brand" href="#">MiddleMan</a>
       
-      <input class="input" id="searchBox" placeholder="Search Craigslist for an item"></input>
+      <input class="input" id="searchBox" placeholder="Search Craigslist"></input>
       <button class="btn" type="button" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></button>
         
     </div>
