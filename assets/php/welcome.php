@@ -30,25 +30,29 @@
     
     <div id="feeds">
         <label>I&apos;m interested in these feeds:</label> 
-        <div class="checkbox">
+        
+        <div>
             <label>
             <input type="checkbox" value="">
             Antiques
             </label>
         </div>    
-            <div class="checkbox">
+        
+        <div>
             <label>
             <input type="checkbox" value="">
             Autos
             </label>
         </div>
-                <div class="checkbox">
+        
+        <div>
             <label>
             <input type="checkbox" value="">
             Clothing
             </label>
         </div>
-                    <div class="checkbox">
+        
+        <div>
             <label>
             <input type="checkbox" value="">
             Electronics
