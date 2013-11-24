@@ -12,7 +12,7 @@
       <a class="navbar-brand" href="#">MiddleMan</a>
       
       <form role="form">
-        <div class="form-group">
+        <div class="form-group" style="display:inline;">
             <input class="form-control" id="searchBox" placeholder="Search products"></input>
             <button class="btn" type="button" onclick="$(&apos;#list&apos;).empty(); search(document.getElementById(&apos;searchBox&apos;).value);"><i class="fa fa-search"></i></button>
         </div>
