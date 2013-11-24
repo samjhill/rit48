@@ -26,7 +26,7 @@
     </div>
     
     <div id="feeds">
-        <label>I&apos;m interested in these feeds:</label> 
+        <label><h3>I&apos;m interested in these feeds:</h3></label> 
         
         <div>
             <label>
