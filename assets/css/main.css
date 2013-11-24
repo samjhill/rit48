@@ -81,7 +81,8 @@ font-size: xx-large;
 }
 
 .navbar i{
-    color: white;    
+    color: white;
+    font-size: 20pt;
 }
 
 .panel{
