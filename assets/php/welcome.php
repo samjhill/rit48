@@ -25,31 +25,35 @@
             <input type="text" class="span3 form-control" placeholder="3.45">
         </div>
     </div>
-    <label>I&apos;m interested in these feeds:</label> 
-    <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Antiques
-	</label>
-    </div>    
+    
+    <div id="feeds">
+        <label>I&apos;m interested in these feeds:</label> 
         <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Autos
-	</label>
+            <label>
+            <input type="checkbox" value="">
+            Antiques
+            </label>
+        </div>    
+            <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">
+            Autos
+            </label>
+        </div>
+                <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">
+            Clothing
+            </label>
+        </div>
+                    <div class="checkbox">
+            <label>
+            <input type="checkbox" value="">
+            Electronics
+            </label>
+        </div>
     </div>
-	    <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Clothing
-	</label>
-    </div>
-	        <div class="checkbox">
-	<label>
-	<input type="checkbox" value="">
-	Electronics
-	</label>
-    </div>    
+    
     <button type="button" class="btn btn-default" onclick="$(&apos;#welcome&apos;).hide();">Submit</button>    
 </form>';
 ?>
