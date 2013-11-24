@@ -52,6 +52,11 @@
     margin: 1em;
 }
 
+#list{
+    margin-top: 2em;
+    margin-bottom: 3em;    
+}
+
 #welcome div{
     margin-left: 2em;
     margin-right: 2em;
