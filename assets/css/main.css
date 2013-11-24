@@ -25,7 +25,6 @@
 
 #searchBox{
     width: auto;
-    vertical-align: middle;
 }
 
 #footer{
@@ -79,4 +78,8 @@ font-size: xx-large;
 
 .slider-horizontal {
 width: 100px;
+}
+
+.search-query{
+    margin-top: 10px;
 }
