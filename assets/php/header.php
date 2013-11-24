@@ -41,7 +41,7 @@
 		<ul class = "subtext">
 		<!-- add these dynamically -->
 		<a href = "#"><i class="fa fa-times"></i></a> things <br/>
-		<a class = "highlighted" href = "#"><i class="fa fa-plus"></i> add feed </a>
+		<a class = "highlighted" href = "#"><i class="fa fa-plus"></i> Electronics </a>
 		</ul>
 		</small>
 		</li>
