@@ -28,7 +28,7 @@
 		<small>(change location) </small></a></li>
         <li><a href="#"><h3>Search Radius</h3></a></li>
 		<small>
-		<ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="300" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
+		<ul class ="slide"><input type="text" id="foo" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
 		</small>
 		
