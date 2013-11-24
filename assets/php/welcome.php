@@ -13,10 +13,8 @@
 	</div>
 	<div class="">
             <label>Distance willing to travel:</label>
-	    <small>
 		<ul class ="slide"><input type="text" class="span2" value="20" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="show">
 		</ul>
-	    </small>
 	    </div>
 	<div class="">
 	    <label>Car MPG:</label>
